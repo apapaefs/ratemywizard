@@ -1496,5 +1496,239 @@ const wizards = [
                 tags: ["Would Not Recommend", "Hilarious", "Talks to a Parrot"], thumbsUp: 567, thumbsDown: 11
             }
         ]
+    },
+    {
+        id: "houdini",
+        name: "Harry Houdini",
+        title: "Escape Artist, Illusionist & Debunker of Frauds",
+        school: "Houdini Institute of Practical Impossibility, New York",
+        department: "Department of Escapology, Stage Magic & Exposing Charlatans",
+        image: "https://upload.wikimedia.org/wikipedia/commons/3/37/HarryHoudini1899.jpg",
+        quality: 4.4,
+        difficulty: 4.8,
+        wouldTakeAgain: 80,
+        numRatings: 267,
+        hotness: true,
+        tags: ["Respected", "Tough Grader", "Amazing Lectures", "Not Actually Magic", "Will Escape Your Exam", "Hates Frauds"],
+        ratings: { awesome: 55, great: 20, good: 12, ok: 8, awful: 5 },
+        breakdown: { "Knowledge": 4.5, "Accessibility": 3.5, "Clarity": 4.5, "Helpfulness": 4.0, "Charisma": 5.0, "Punctuality": 4.5 },
+        reviews: [
+            {
+                quality: 5.0, difficulty: 5.0,
+                course: "ESCP 501: Advanced Escapology & Being Buried Alive (Practicum)",
+                date: "October, 1920", attendance: "Mandatory", forCredit: true, textbook: false, grade: "A-", wouldTakeAgain: true,
+                text: "Houdini handcuffed himself, put himself in a locked trunk, had the trunk wrapped in chains, and dropped into the East River. For a DEMONSTRATION. He was back at the podium in 90 seconds, completely dry, continuing his lecture on 'persistence.' The class sat in stunned silence. The midterm was escaping from a locked closet. I was in there for four hours. Houdini checked on me periodically and said 'you're overthinking it.' I was NOT overthinking it. The lock was REAL. I eventually escaped using a hairpin and CRIED. He said 'that's the spirit.' Greatest teacher I've ever had.",
+                tags: ["Amazing Lectures", "Tough Grader", "Respected"], thumbsUp: 689, thumbsDown: 4
+            },
+            {
+                quality: 5.0, difficulty: 4.5,
+                course: "DEBK 400: Exposing Fake Mediums & Supernatural Fraud",
+                date: "March, 1924", attendance: "Not Mandatory", forCredit: true, textbook: false, grade: "A", wouldTakeAgain: true,
+                text: "Houdini HATES fake psychics. HATES them. He spent his career attending seances in disguise and then standing up mid-session and yelling 'FRAUD!' He brought us to a seance as a field trip and within 10 minutes he'd exposed the medium using hidden wires, a fake ectoplasm made of cheesecloth, and a speaking trumpet operated by her foot. The medium was furious. Houdini was DELIGHTED. He then said 'the real magic is human ingenuity' and walked out. He has a standing bounty of $10,000 for anyone who can show him real magic. Nobody has collected. He seems both proud and disappointed.",
+                tags: ["Hates Frauds", "Amazing Lectures", "Hilarious"], thumbsUp: 578, thumbsDown: 8
+            },
+            {
+                quality: 4.0, difficulty: 5.0,
+                course: "PAIN 300: Endurance, Pain Tolerance & Punching Houdini in the Stomach",
+                date: "October, 1926", attendance: "Mandatory", forCredit: true, textbook: false, grade: "B+", wouldTakeAgain: false,
+                text: "Houdini claims he can take any punch to the stomach. This is part of the curriculum. Students punch him in the abdomen as part of the 'physical resilience' module. He doesn't flinch. He NEVER flinches. A student punched him without warning before he'd braced himself and he still taught the entire two-hour lecture. We later found out he was in severe pain the whole time. He said 'the show must go on' which is either inspirational or deeply concerning. He has turned his own body into a teaching aid and I don't know how to feel about that on the course evaluation form.",
+                tags: ["Tough Grader", "Will Escape Your Exam", "Respected"], thumbsUp: 456, thumbsDown: 12
+            }
+        ]
+    },
+    {
+        id: "kvothe",
+        name: "Kvothe",
+        title: "Kingkiller, Arcane Scholar, Innkeeper (Retired?)",
+        school: "The University (The Arcanum)",
+        department: "Department of Sympathy, Naming & Unreliable Narration",
+        image: "https://upload.wikimedia.org/wikipedia/commons/c/cf/Kingkiller_denna_bynataconfressas.png",
+        quality: 4.6,
+        difficulty: 3.8,
+        wouldTakeAgain: 82,
+        numRatings: 198,
+        hotness: true,
+        tags: ["Inspirational", "Amazing Lectures", "Unreliable Narrator", "Plays the Lute", "Expelled Three Times", "Red Hair"],
+        ratings: { awesome: 58, great: 20, good: 12, ok: 5, awful: 5 },
+        breakdown: { "Knowledge": 5.0, "Accessibility": 3.5, "Clarity": 4.0, "Helpfulness": 3.5, "Charisma": 5.0, "Punctuality": 2.5 },
+        reviews: [
+            {
+                quality: 5.0, difficulty: 4.0,
+                course: "SYMP 301: Principles of Sympathy & Binding",
+                date: "Term 3, University Year", attendance: "Mandatory", forCredit: true, textbook: true, grade: "A", wouldTakeAgain: true,
+                text: "Kvothe taught himself sympathy while living on the streets as a CHILD and is now teaching it at the university he was expelled from. Three times. He was expelled THREE TIMES and they kept letting him back because he's too brilliant to lose. He lit a candle by splitting his mind into two separate streams of thought and casually told us 'this is basic.' BASIC? I can barely split my attention between the lecture and not falling asleep. He also played the lute during office hours and I forgot why I was there. His music is literally enchanting. I failed to ask about my grade and left feeling strangely complete.",
+                tags: ["Amazing Lectures", "Plays the Lute", "Inspirational"], thumbsUp: 534, thumbsDown: 7
+            },
+            {
+                quality: 4.5, difficulty: 4.5,
+                course: "NAME 501: The Art of Naming (If You Can Find The Class)",
+                date: "Term 5, University Year", attendance: "When Master Elodin Feels Like It", forCredit: true, textbook: false, grade: "A-", wouldTakeAgain: true,
+                text: "Kvothe is the only student who ever called the Name of the Wind during a TUITION HEARING. The administration was so impressed they reduced his fees. He now teaches Naming by throwing students off roofs, locking them in dark rooms, and asking impossible riddles. He says this is how Master Elodin taught HIM. I said that sounds like educational malpractice. He said 'the wind doesn't care about malpractice.' The wind then blew my notes away. I think he did that on purpose. He definitely did that on purpose.",
+                tags: ["Tough Grader", "Unreliable Narrator", "Amazing Lectures"], thumbsUp: 612, thumbsDown: 9
+            },
+            {
+                quality: 4.5, difficulty: 3.0,
+                course: "STOR 100: The Art of Storytelling (An Unreliable Seminar)",
+                date: "Term 7, University Year", attendance: "Not Mandatory", forCredit: false, textbook: false, grade: "A", wouldTakeAgain: true,
+                text: "Kvothe tells the BEST stories. The problem is I'm 90% sure half of them aren't true. He says he killed a king. He says he talked to the Cthaeh. He says he was shipwrecked and trained with warrior monks. Every story is more unbelievable than the last and he tells them with such conviction that you BELIEVE every word. A student asked for evidence and Kvothe said 'I'm telling you the story, you can believe what you want.' He then played a song so beautiful that three students changed their major to music. We still don't know if any of it happened. The song was real though.",
+                tags: ["Unreliable Narrator", "Plays the Lute", "Hilarious"], thumbsUp: 478, thumbsDown: 5
+            }
+        ]
+    },
+    {
+        id: "cthulhu",
+        name: "Cthulhu",
+        title: "Great Old One, High Priest of the Old Gods, Dreamer of R'lyeh",
+        school: "R'lyeh University (Sunken Campus)",
+        department: "Department of Cosmic Horror, Non-Euclidean Geometry & Madness Studies",
+        image: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Cthulhu_sketch_by_Lovecraft.jpg",
+        quality: 1.5,
+        difficulty: 5.0,
+        wouldTakeAgain: 5,
+        numRatings: 47,
+        hotness: false,
+        tags: ["Would Not Recommend", "Incomprehensible", "Campus is Underwater", "Drives Students Insane", "Still Sleeping", "Ph'nglui Mglw'nafh"],
+        ratings: { awesome: 5, great: 3, good: 5, ok: 7, awful: 80 },
+        breakdown: { "Knowledge": 5.0, "Accessibility": 0.0, "Clarity": 0.0, "Helpfulness": 0.0, "Charisma": 5.0, "Punctuality": 0.0 },
+        reviews: [
+            {
+                quality: 1.0, difficulty: 5.0,
+                course: "GEOM 666: Non-Euclidean Geometry & Architecture That Shouldn't Exist",
+                date: "When the Stars Were Right", attendance: "Involuntary", forCredit: false, textbook: false, grade: "MADNESS", wouldTakeAgain: false,
+                text: "The campus is a sunken city at the bottom of the Pacific Ocean. I don't know how I got here. The buildings have angles that don't exist in normal geometry. I looked at the lecture hall and my nose started bleeding. Professor Cthulhu hasn't woken up for any lectures this semester. He's been asleep for millennia. His DREAMS are the lectures. I'm learning through cosmic nightmares. I woke up knowing calculus I never studied and screaming in a language that predates humanity. My GPA is unknowable. My sanity is gone. The dining hall serves something. I don't want to know what. 1 star.",
+                tags: ["Drives Students Insane", "Campus is Underwater", "Incomprehensible"], thumbsUp: 234, thumbsDown: 47
+            },
+            {
+                quality: 2.0, difficulty: 5.0,
+                course: "CULT 100: Starting Your Own Cult (An Introduction)",
+                date: "The Aeon of Madness", attendance: "Compulsory (Psychically)", forCredit: false, textbook: false, grade: "FHTAGN", wouldTakeAgain: false,
+                text: "I didn't enroll in this class. I was sleeping in my dorm and suddenly I was here, chanting in R'lyehian. There are 47 students and none of us remember signing up. The syllabus was carved into a stone tablet and it says the final is 'awakening That Which Sleeps.' I am NOT awakening anything. The TA is a fish-person named Dagon who smells like the ocean and grades exclusively in tentacle stamps. I got three tentacles out of five. I don't know what that means. I'm afraid to ask. I can hear the ocean in my dreams now even though I'm in Kansas. Please help.",
+                tags: ["Would Not Recommend", "Incomprehensible", "Drives Students Insane"], thumbsUp: 178, thumbsDown: 23
+            },
+            {
+                quality: 1.0, difficulty: 5.0,
+                course: "COSM 500: Humanity's Place in the Universe (Spoiler: Insignificant)",
+                date: "Outside of Time", attendance: "Irrelevant", forCredit: false, textbook: false, grade: "VOID", wouldTakeAgain: false,
+                text: "I understood the lecture for exactly 0.3 seconds. In those 0.3 seconds I comprehended the true nature of reality, the insignificance of human existence, and the fact that the universe is a thin membrane stretched over an abyss of chaos populated by beings so vast that thinking about them is like an ant contemplating calculus. Then I forgot everything and found myself on the floor of the library with a nosebleed and a fully completed thesis in a language I don't recognize. The thesis got published. It won an award. I cannot read it. The award ceremony was in R'lyeh. I am not OK.",
+                tags: ["Incomprehensible", "Still Sleeping", "Ph'nglui Mglw'nafh"], thumbsUp: 345, thumbsDown: 15
+            }
+        ]
+    },
+    {
+        id: "ged",
+        name: "Ged (Sparrowhawk)",
+        title: "Archmage of Earthsea, Dragonlord",
+        school: "School of Roke, Earthsea",
+        department: "Department of True Names, Balance & Knowing When Not to Act",
+        image: "https://upload.wikimedia.org/wikipedia/commons/e/e5/Page_de_garde_de_A_Wizard_of_Earthsea.jpg",
+        quality: 4.7,
+        difficulty: 4.5,
+        wouldTakeAgain: 85,
+        numRatings: 167,
+        hotness: false,
+        tags: ["Respected", "Tough Grader", "Inspirational", "Silent Type", "Knows Your True Name", "Balance is Everything"],
+        ratings: { awesome: 62, great: 18, good: 10, ok: 5, awful: 5 },
+        breakdown: { "Knowledge": 5.0, "Accessibility": 3.0, "Clarity": 4.5, "Helpfulness": 4.5, "Charisma": 3.5, "Punctuality": 4.0 },
+        reviews: [
+            {
+                quality: 5.0, difficulty: 5.0,
+                course: "NAME 601: True Names & The Fundamental Nature of Things",
+                date: "In the Age of Roke", attendance: "Mandatory", forCredit: true, textbook: false, grade: "A-", wouldTakeAgain: true,
+                text: "Archmage Ged teaches that every thing in the world has a True Name, and knowing it gives you power over it. He called a wind by name and it came. He called a hawk by name and it landed on his arm. He then said 'The greatest power is knowing which names NOT to speak.' The whole class is about restraint. He's the most powerful wizard in Earthsea and his main lesson is 'don't use magic unless you absolutely have to.' He once spent an entire lecture in silence. Just... silence. Afterward he said 'that was the lesson.' Three students achieved enlightenment. I achieved confusion. But a productive confusion.",
+                tags: ["Respected", "Inspirational", "Silent Type"], thumbsUp: 623, thumbsDown: 5
+            },
+            {
+                quality: 5.0, difficulty: 4.5,
+                course: "SHAD 400: Confronting Your Shadow Self (An Intensive)",
+                date: "The Year of the Hawk", attendance: "Mandatory", forCredit: true, textbook: false, grade: "A", wouldTakeAgain: true,
+                text: "Ged once accidentally released a shadow creature from the spirit world when he was young and proud. He spent YEARS chasing it across the ocean before realizing it was a part of himself. He turned this into a course on self-acceptance and it's the most intense thing I've ever experienced. The final is literally confronting a magical manifestation of your worst qualities. I faced my shadow and it was me but lazier and meaner. We talked. We hugged. I cried. Ged nodded and said 'good.' One word. From the Archmage of Earthsea. I have never needed more validation or received less. Somehow it was enough.",
+                tags: ["Will Change Your Life", "Tough Grader", "Inspirational"], thumbsUp: 789, thumbsDown: 3
+            },
+            {
+                quality: 4.5, difficulty: 4.0,
+                course: "BALN 200: The Equilibrium - Why Magic Has a Price",
+                date: "After the Farthest Shore", attendance: "Mandatory", forCredit: true, textbook: false, grade: "B+", wouldTakeAgain: true,
+                text: "Ged's central teaching: every magical act has a consequence. Change the weather here, and a storm hits there. Heal one person, and the balance shifts somewhere else. He gave up ALL his magical power to save the world and now teaches from the perspective of someone who was once the most powerful wizard alive and chose to become ordinary. A student asked 'don't you miss the power?' Ged said 'I miss the goats I kept on my island more.' He keeps goats now. The Archmage of Earthsea is a goat farmer who teaches part-time. This is either the saddest or most beautiful thing I've ever heard.",
+                tags: ["Balance is Everything", "Respected", "Caring"], thumbsUp: 534, thumbsDown: 7
+            }
+        ]
+    },
+    {
+        id: "rand",
+        name: "Rand al'Thor",
+        title: "The Dragon Reborn, He Who Comes With the Dawn, Car'a'carn",
+        school: "Black Tower Academy of Male Channelers",
+        department: "Department of Saidin, Madness Prevention & Saving the World",
+        image: "https://upload.wikimedia.org/wikipedia/commons/7/77/Moiraine_Sedai.jpg",
+        quality: 3.7,
+        difficulty: 5.0,
+        wouldTakeAgain: 65,
+        numRatings: 234,
+        hotness: true,
+        tags: ["Inspirational", "Tough Grader", "Unpredictable", "May Go Mad", "Has Multiple Personalities", "Literally the Chosen One"],
+        ratings: { awesome: 38, great: 20, good: 17, ok: 12, awful: 13 },
+        breakdown: { "Knowledge": 4.5, "Accessibility": 2.5, "Clarity": 2.5, "Helpfulness": 3.5, "Charisma": 4.0, "Punctuality": 2.0 },
+        reviews: [
+            {
+                quality: 4.0, difficulty: 5.0,
+                course: "SAID 501: Channeling Saidin Without Going Insane (We Hope)",
+                date: "999 NE, New Era", attendance: "Mandatory", forCredit: true, textbook: false, grade: "B+", wouldTakeAgain: true,
+                text: "Rand al'Thor teaches male channeling, which historically drives practitioners INSANE and makes them ROT ALIVE. Fun stuff. He solved this problem by literally cleansing the entire Source of a cosmic taint using two ancient artifacts. The first lecture was 'I fixed the thing that has been killing male channelers for 3,000 years, here's how.' Casual. He said it like he was describing his weekend. He then asked us to channel a small flame. A student set his desk on fire. Rand sighed. He does that a lot. He has the weight of the world on his shoulders and it shows. When he channels, you can FEEL reality bending. Five stars for power, three stars for emotional stability.",
+                tags: ["Tough Grader", "May Go Mad", "Inspirational"], thumbsUp: 567, thumbsDown: 12
+            },
+            {
+                quality: 3.5, difficulty: 5.0,
+                course: "DEST 600: Being the Chosen One & Managing Expectations",
+                date: "1000 NE, New Era", attendance: "Not Mandatory", forCredit: false, textbook: false, grade: "A-", wouldTakeAgain: true,
+                text: "Rand has like SEVENTEEN prophecied titles. Dragon Reborn. He Who Comes With the Dawn. Coramoor. Car'a'carn. Lord of the Morning. The list goes on. He dedicated an entire lecture to how annoying it is when people call you by your prophecy name instead of your actual name. 'My name is RAND,' he said, 'not He Who Comes With The Dawn.' A student called him Dragon Reborn and he twitched. He's also hearing the voice of a 3,000-year-old dead man in his head and he's VERY open about it. He said 'Lews Therin thinks your channeling form is sloppy.' Sir, who is Lews Therin? 'The voice.' OK. Cool. Normal school.",
+                tags: ["Has Multiple Personalities", "Hilarious", "Literally the Chosen One"], thumbsUp: 489, thumbsDown: 8
+            },
+            {
+                quality: 4.0, difficulty: 5.0,
+                course: "LAST 700: The Last Battle (Field Exam)",
+                date: "1000 NE, Tarmon Gai'don", attendance: "Mandatory (Universe-Wide)", forCredit: true, textbook: false, grade: "A+", wouldTakeAgain: false,
+                text: "The final was the ACTUAL APOCALYPSE. Not a simulation. The real one. Rand fought the literal embodiment of evil at the edge of reality while we provided support channeling. He died. Then he came back. Then he fought the Dark One in a philosophical debate about the nature of free will WHILE DEAD. He won by arguing that a world without evil would also lack free will. He defeated Satan with a PHILOSOPHY PAPER. I was fighting Trollocs and he was doing EPISTEMOLOGY. He came back with a different face and wandered off to explore the world. We all got A+. The university doesn't exist anymore because reality almost ended. 10/10 course.",
+                tags: ["Inspirational", "Literally the Chosen One", "Will Change Your Life"], thumbsUp: 823, thumbsDown: 4
+            }
+        ]
+    },
+    {
+        id: "paul",
+        name: "Paul Atreides (Muad'Dib)",
+        title: "Duke of Arrakis, Kwisatz Haderach, Emperor of the Known Universe",
+        school: "Sietch Tabr Academy of Desert Power",
+        department: "Department of Prescience, Spice Studies & Reluctant Messiah-hood",
+        image: "https://upload.wikimedia.org/wikipedia/commons/5/5c/Emperor_Paul_Muad%E2%80%99Dib_%E2%80%93_A_Dune_Fan_Art.png",
+        quality: 4.2,
+        difficulty: 5.0,
+        wouldTakeAgain: 70,
+        numRatings: 203,
+        hotness: true,
+        tags: ["Respected", "Tough Grader", "Can See the Future", "Spice Required", "Reluctant Messiah", "Walks Without Rhythm"],
+        ratings: { awesome: 48, great: 20, good: 14, ok: 10, awful: 8 },
+        breakdown: { "Knowledge": 5.0, "Accessibility": 2.0, "Clarity": 3.5, "Helpfulness": 3.5, "Charisma": 4.8, "Punctuality": 4.0 },
+        reviews: [
+            {
+                quality: 4.5, difficulty: 5.0,
+                course: "PRES 601: Prescience & Why Knowing the Future Is Actually Terrible",
+                date: "10,193 AG", attendance: "Mandatory", forCredit: true, textbook: false, grade: "A-", wouldTakeAgain: true,
+                text: "Paul can see the future. ALL of it. Every possible timeline branching out in infinite directions. He uses this to teach the most depressing course at the academy: that knowing the future is a CURSE, not a gift. He showed us a vision of our possible futures and I saw myself becoming an accountant in seven timelines. I wept. He said 'the future is a trap, the only freedom is in the present moment.' Then he stared at the desert for twenty minutes. The man has seen billions die in a holy war fought in his name and it haunts every lecture. Pass the spice. You need spice for this class. Literally. It's a supply fee.",
+                tags: ["Can See the Future", "Tough Grader", "Respected"], thumbsUp: 567, thumbsDown: 9
+            },
+            {
+                quality: 4.0, difficulty: 5.0,
+                course: "WORM 400: Sandworm Riding & Desert Survival (Extreme Practicum)",
+                date: "10,194 AG", attendance: "Mandatory", forCredit: true, textbook: false, grade: "B+", wouldTakeAgain: true,
+                text: "The practical final is riding a SANDWORM. A living sandworm. They are 400 meters long. You summon one by rhythmic thumping, plant maker hooks in its side, and RIDE it across the desert at 300 km/h. Paul did it at age 15 to prove himself to the Fremen. He now watches us attempt it with a calm expression that says 'I've foreseen which of you survive this.' Two students failed. They're fine. Paul saw it coming and placed rescue thopters. He also taught us to walk without rhythm so the worms don't detect us. I now walk weird permanently. My roommate thinks I've had a stroke.",
+                tags: ["Tough Grader", "Walks Without Rhythm", "Amazing Lectures"], thumbsUp: 634, thumbsDown: 7
+            },
+            {
+                quality: 4.0, difficulty: 5.0,
+                course: "MESS 500: Reluctant Messiahs & The Danger of Charismatic Leaders",
+                date: "10,195 AG", attendance: "Not Mandatory", forCredit: true, textbook: false, grade: "A", wouldTakeAgain: true,
+                text: "This is the most important class at Sietch Tabr and nobody takes it because the title sounds boring. Paul spent the entire semester warning us about the dangers of following charismatic leaders blindly. He said 'the Fremen made me their messiah and it led to a galactic jihad that killed billions.' A student said 'but you're teaching us to be like you.' Paul said 'No. I'm teaching you to never let anyone become what I became.' The room was silent for five minutes. He then said 'your homework is to question everything I just said.' The man weaponized self-awareness. This class should be mandatory across the Imperium.",
+                tags: ["Reluctant Messiah", "Inspirational", "Will Change Your Life"], thumbsUp: 789, thumbsDown: 3
+            }
+        ]
     }
 ];
