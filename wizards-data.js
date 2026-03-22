@@ -873,5 +873,196 @@ const wizards = [
                 tags: ["Easy Grader", "Hilarious", "Bring Bananas"], thumbsUp: 567, thumbsDown: 4
             }
         ]
+    },
+    {
+        id: "newton",
+        name: "Sir Isaac Newton",
+        title: "Lucasian Professor, Alchemist & Natural Philosopher",
+        school: "Trinity College, Cambridge (& the Secret Alchemical Laboratory)",
+        department: "Department of Gravity, Optics & Clandestine Transmutation",
+        image: "https://upload.wikimedia.org/wikipedia/commons/3/39/GodfreyKneller-IsaacNewton-1689.jpg",
+        quality: 3.9,
+        difficulty: 5.0,
+        wouldTakeAgain: 62,
+        numRatings: 231,
+        hotness: false,
+        tags: ["Tough Grader", "Respected", "Lecture Heavy", "Secret Lab", "Will Fail You With Math", "Grudge Holder"],
+        ratings: { awesome: 38, great: 22, good: 15, ok: 12, awful: 13 },
+        breakdown: { "Knowledge": 5.0, "Accessibility": 1.0, "Clarity": 3.5, "Helpfulness": 2.0, "Charisma": 1.5, "Punctuality": 4.5 },
+        reviews: [
+            {
+                quality: 4.0, difficulty: 5.0,
+                course: "ALCH 501: Transmutation of Base Metals into Gold (Classified)",
+                date: "Michaelmas Term, 1687", attendance: "Mandatory", forCredit: true, textbook: false, grade: "B-", wouldTakeAgain: true,
+                text: "Newton teaches physics by day and runs a SECRET ALCHEMY LAB by night. I found out because I saw him sneaking into his workshop at 2am carrying mercury and a Bible. The man has been trying to turn lead into gold for twenty years. He hasn't succeeded but he DID accidentally invent calculus while procrastinating on his alchemy homework. His grading is brutal - he invented an entire branch of mathematics just to make the exams harder. My C+ required solving equations that didn't exist six months ago.",
+                tags: ["Tough Grader", "Secret Lab", "Respected"], thumbsUp: 456, thumbsDown: 8
+            },
+            {
+                quality: 5.0, difficulty: 5.0,
+                course: "GRAV 301: Why Things Fall Down (A Comprehensive Theory)",
+                date: "Easter Term, 1688", attendance: "Mandatory", forCredit: true, textbook: true, grade: "A-", wouldTakeAgain: true,
+                text: "Professor Newton got hit by a falling apple during an outdoor lecture and instead of saying 'ow' like a normal person, he spent the next 18 months writing a book explaining WHY the apple fell. The book is the textbook. It's in Latin. There are no translations because he says if you can't read Latin you 'lack the intellectual fortitude for natural philosophy.' The man invented gravity as a FLEX. He then used it to calculate the orbit of the moon during office hours while I waited to ask about my grade. Absolute menace. Genius, but menace.",
+                tags: ["Tough Grader", "Will Fail You With Math", "Inspirational"], thumbsUp: 678, thumbsDown: 5
+            },
+            {
+                quality: 2.0, difficulty: 5.0,
+                course: "OPTI 400: Prisms, Light & Staring at the Sun (Don't)",
+                date: "Lent Term, 1689", attendance: "Mandatory", forCredit: true, textbook: true, grade: "C+", wouldTakeAgain: false,
+                text: "Newton stuck a NEEDLE behind his own EYEBALL to test a theory about light and color. During a live demonstration. Students fainted. He said 'the data was worth the discomfort.' He then spent three lectures proving that white light contains all colors using a prism, which was genuinely mindblowing, but I couldn't focus because I kept thinking about the needle thing. He also has a vendetta against a man named Leibniz and brings it up in every class. Sir, this is optics, not a courtroom.",
+                tags: ["Tough Grader", "Grudge Holder", "Would Not Recommend"], thumbsUp: 534, thumbsDown: 12
+            },
+            {
+                quality: 4.0, difficulty: 5.0,
+                course: "BIBL 600: Decoding Biblical Prophecy Through Mathematics",
+                date: "Michaelmas Term, 1690", attendance: "Not Mandatory", forCredit: false, textbook: false, grade: "B+", wouldTakeAgain: true,
+                text: "Newton spent 50 years secretly trying to calculate the exact date of the apocalypse using the Bible and mathematics. He settled on 'no earlier than 2060.' I asked him how confident he was and he said '95%, but I'm still working on the margin of error.' This man treats the end of the world like a homework problem. He showed us his calculations - there were 300 pages. In Latin. With DIAGRAMS. I don't know if he's a prophet or a madman but he's definitely the smartest person I've ever been terrified of.",
+                tags: ["Lecture Heavy", "Respected", "Tough Grader"], thumbsUp: 412, thumbsDown: 15
+            },
+            {
+                quality: 3.0, difficulty: 5.0,
+                course: "MINT 100: Running the Royal Mint & Executing Counterfeiters",
+                date: "Easter Term, 1699", attendance: "Mandatory", forCredit: true, textbook: false, grade: "B", wouldTakeAgain: false,
+                text: "Newton took a side job running the Royal Mint and personally hunted down counterfeiters. He had PEOPLE EXECUTED. He went undercover in taverns and gambling dens to catch criminals. This is a MATH PROFESSOR. The class was supposed to be about economics but it turned into a true crime podcast. He showed us his disguises. He has a fake mustache collection. Isaac Newton has a FAKE MUSTACHE COLLECTION. I can never look at the Principia the same way again.",
+                tags: ["Hilarious", "Tough Grader", "Grudge Holder"], thumbsUp: 567, thumbsDown: 7
+            }
+        ]
+    },
+    {
+        id: "babayaga",
+        name: "Baba Yaga",
+        title: "Witch of the Iron Fence, Keeper of the Chicken-Legged Hut",
+        school: "The Deep Woods Academy (Location Changes Daily)",
+        department: "Department of Folklore Enforcement, Cannibalism Studies & Moral Testing",
+        image: "https://upload.wikimedia.org/wikipedia/commons/4/45/Bilibin._Baba_Yaga.jpg",
+        quality: 3.4,
+        difficulty: 4.8,
+        wouldTakeAgain: 48,
+        numRatings: 192,
+        hotness: false,
+        tags: ["Tough Grader", "Intimidating", "Campus Moves Around", "Bring Your Own Mortar", "May Eat Students", "Surprisingly Fair"],
+        ratings: { awesome: 30, great: 18, good: 17, ok: 15, awful: 20 },
+        breakdown: { "Knowledge": 5.0, "Accessibility": 0.5, "Clarity": 3.5, "Helpfulness": 3.0, "Charisma": 4.0, "Punctuality": 1.0 },
+        reviews: [
+            {
+                quality: 3.0, difficulty: 5.0,
+                course: "HOUS 101: Living Architecture & Poultry-Based Foundations",
+                date: "Once Upon a Time", attendance: "Mandatory", forCredit: true, textbook: false, grade: "B", wouldTakeAgain: false,
+                text: "The campus is a hut that walks around on GIANT CHICKEN LEGS. You cannot find the classroom. The classroom finds YOU. I showed up to the coordinates on the syllabus and there was nothing there. Then a house on chicken legs came RUNNING out of the forest and sat down in front of me. The door opened and Baba Yaga said 'you're late.' I was 20 minutes EARLY. The hut had wandered to a different time zone. There is no campus map because the campus is SENTIENT and UNCOOPERATIVE.",
+                tags: ["Campus Moves Around", "Tough Grader", "Would Not Recommend"], thumbsUp: 489, thumbsDown: 8
+            },
+            {
+                quality: 4.0, difficulty: 5.0,
+                course: "TEST 400: Impossible Tasks & How to Complete Them Anyway",
+                date: "In the Darkest Part of Winter", attendance: "Mandatory", forCredit: true, textbook: false, grade: "A-", wouldTakeAgain: true,
+                text: "Baba Yaga's teaching method is giving you three impossible tasks and seeing if you survive. My midterm was separating a pile of wheat from dirt using only my tears. My final was stealing fire from her skull-topped fence without dying. She gives you NO instructions and NO hints. But here's the thing - if you're clever and kind, you pass. If you're rude or lazy, she eats you. Literally. Two students failed this semester. They are no longer with us. She says they 'graduated to a different plane.' The soup that week tasted weird. I'm not asking questions.",
+                tags: ["Tough Grader", "May Eat Students", "Surprisingly Fair"], thumbsUp: 623, thumbsDown: 4
+            },
+            {
+                quality: 3.5, difficulty: 4.5,
+                course: "MORT 300: Flying via Mortar & Pestle (Intermediate Level)",
+                date: "When the Leaves Turned", attendance: "Mandatory", forCredit: true, textbook: false, grade: "B+", wouldTakeAgain: true,
+                text: "Baba Yaga flies in a giant MORTAR, using the PESTLE as a rudder, and sweeps away her tracks with a BROOM. This is the most unhinged form of transportation in any magical tradition and I LOVE it. She taught us to fly in kitchen equipment at 200 feet. I crashed into a birch tree. She laughed for ten minutes, picked me up, and said 'again.' By the end of the semester I could do barrel rolls in a mortar and pestle. My parents don't believe me. I don't care. This is the most useful thing I've ever learned.",
+                tags: ["Amazing Lectures", "Tough Grader", "Bring Your Own Mortar"], thumbsUp: 534, thumbsDown: 6
+            },
+            {
+                quality: 3.0, difficulty: 5.0,
+                course: "FENC 100: Decorating with Human Skulls (An Introduction)",
+                date: "The Night Before Solstice", attendance: "Mandatory", forCredit: true, textbook: false, grade: "B-", wouldTakeAgain: false,
+                text: "Baba Yaga's front yard is a fence made of HUMAN BONES topped with GLOWING SKULLS. She said this was 'curb appeal.' The first assignment was interior decorating using only materials found in the haunted forest. A student used flowers. Baba Yaga said flowers were 'too cheerful' and made him redo it with mushrooms and owl pellets. I used bones and got a B-. She said my bone arrangement 'lacked menace but showed promising spatial awareness.' I put this on my resume under 'Design Skills.' No regrets.",
+                tags: ["Intimidating", "Tough Grader", "Hilarious"], thumbsUp: 445, thumbsDown: 11
+            }
+        ]
+    },
+    {
+        id: "faust",
+        name: "Doctor Faustus",
+        title: "Scholar, Theologian & Damned Soul",
+        school: "University of Wittenberg (On Sabbatical in Hell)",
+        department: "Department of Forbidden Knowledge & Contractual Demonology",
+        image: "https://upload.wikimedia.org/wikipedia/commons/6/67/Rembrandt%2C_Faust.jpg",
+        quality: 4.1,
+        difficulty: 4.3,
+        wouldTakeAgain: 60,
+        numRatings: 145,
+        hotness: false,
+        tags: ["Respected", "Tough Grader", "Read the Fine Print", "Lecture Heavy", "Amazing Lectures", "Sold His Soul"],
+        ratings: { awesome: 40, great: 22, good: 15, ok: 13, awful: 10 },
+        breakdown: { "Knowledge": 5.0, "Accessibility": 3.5, "Clarity": 4.5, "Helpfulness": 4.0, "Charisma": 4.5, "Punctuality": 3.0 },
+        reviews: [
+            {
+                quality: 5.0, difficulty: 4.0,
+                course: "KNOW 500: The Limits of Human Knowledge (& How to Exceed Them)",
+                date: "Wittenberg, 1587", attendance: "Mandatory", forCredit: true, textbook: false, grade: "A", wouldTakeAgain: true,
+                text: "Dr. Faustus is the most brilliant lecturer I have ever encountered. He mastered theology, law, medicine, AND magic, got bored, and sold his soul to the devil for more knowledge. His lectures on the nature of infinity made me weep. The problem is he keeps using his own life as a cautionary tale and then getting emotional. He spent the last twenty minutes of every class staring at the hourglass on his desk whispering 'was it worth it.' Sir, we have a final next week. Please focus.",
+                tags: ["Inspirational", "Amazing Lectures", "Respected"], thumbsUp: 489, thumbsDown: 7
+            },
+            {
+                quality: 4.0, difficulty: 5.0,
+                course: "CONT 401: Contract Law with Infernal Entities",
+                date: "Wittenberg, 1588", attendance: "Mandatory", forCredit: true, textbook: true, grade: "B+", wouldTakeAgain: true,
+                text: "This class is ESSENTIAL. Dr. Faustus teaches contract law using his OWN contract with the devil as the primary case study. He signed away his immortal soul for 24 years of unlimited power and knowledge. He did NOT read the fine print. He now teaches us to read every clause, sub-clause, and demonic footnote before signing anything. The midterm was finding loopholes in Mephistopheles' standard soul contract. I found seven. Faustus found none in 24 years. He gave me an A on the midterm and looked genuinely sad about it.",
+                tags: ["Tough Grader", "Read the Fine Print", "Amazing Lectures"], thumbsUp: 567, thumbsDown: 5
+            },
+            {
+                quality: 3.5, difficulty: 4.5,
+                course: "DEMO 300: Summoning & Managing Demonic Teaching Assistants",
+                date: "Wittenberg, 1589", attendance: "Mandatory", forCredit: true, textbook: false, grade: "B", wouldTakeAgain: false,
+                text: "Dr. Faustus's TA is Mephistopheles. An actual demon. From actual Hell. He grades papers in red ink that smells like sulfur and occasionally bursts into flame. He gave me a B and when I went to office hours to dispute it, he showed me a vision of my own death and said 'does the grade really matter in the grand scheme of things?' It does, Mephistopheles. I need a 3.5 GPA for financial aid. He then changed it to a B+ because 'even demons respect persistence.' The power dynamic in this department is WILD.",
+                tags: ["Tough Grader", "Intimidating", "Read the Fine Print"], thumbsUp: 623, thumbsDown: 9
+            },
+            {
+                quality: 4.0, difficulty: 3.5,
+                course: "REGR 100: Regret Studies & Applied Melancholy",
+                date: "Wittenberg, 1590", attendance: "Not Mandatory", forCredit: false, textbook: false, grade: "A-", wouldTakeAgain: true,
+                text: "This is secretly the best philosophy class at Wittenberg. Faustus spent the semester exploring whether infinite knowledge is worth infinite suffering. Week 3 he conjured Helen of Troy to make a point about desire vs fulfillment. She was unimpressed by the lecture hall. Week 8 he flew us to Rome on a magic carpet to 'broaden our perspectives.' By week 12 he was openly weeping about his choices. The class evaluations had a section that said 'Would you sell your soul for this knowledge? Y/N.' I circled Y. He pulled me aside and said 'Don't.' Most impactful elective I've ever taken.",
+                tags: ["Inspirational", "Caring", "Amazing Lectures"], thumbsUp: 712, thumbsDown: 3
+            }
+        ]
+    },
+    {
+        id: "rasputin",
+        name: "Grigori Rasputin",
+        title: "The Mad Monk, Mystic Healer & Unkillable Lecturer",
+        school: "Imperial Russian Academy of Mysticism, St. Petersburg",
+        department: "Department of Faith Healing, Hypnosis & Surviving Assassination",
+        image: "https://upload.wikimedia.org/wikipedia/commons/9/97/Grigori_Rasputin_1916.jpg",
+        quality: 2.9,
+        difficulty: 3.5,
+        wouldTakeAgain: 44,
+        numRatings: 187,
+        hotness: true,
+        tags: ["Intimidating", "Confusing Sometimes", "Will Not Die", "Hypnotic Lectures", "Office Hours at Midnight", "Unpredictable"],
+        ratings: { awesome: 25, great: 15, good: 18, ok: 18, awful: 24 },
+        breakdown: { "Knowledge": 3.0, "Accessibility": 4.0, "Clarity": 2.0, "Helpfulness": 3.5, "Charisma": 5.0, "Punctuality": 2.5 },
+        reviews: [
+            {
+                quality: 3.0, difficulty: 3.0,
+                course: "HEAL 301: Faith Healing & Inexplicable Medical Recoveries",
+                date: "February, 1913", attendance: "Mandatory", forCredit: true, textbook: false, grade: "B+", wouldTakeAgain: true,
+                text: "Rasputin healed the Tsarevich's hemophilia through what he calls 'prayer and intense staring.' No medicine. No bandages. Just STARING. The medical faculty has tried to debunk him seventeen times and failed every single time. He invited the entire class to watch him heal a man's broken arm by whispering to it. The arm healed. The doctors are furious. Rasputin smiled and said 'faith is stronger than science.' He then drank an entire bottle of wine and continued the lecture. Unorthodox but effective.",
+                tags: ["Hypnotic Lectures", "Confusing Sometimes", "Respected"], thumbsUp: 345, thumbsDown: 18
+            },
+            {
+                quality: 4.0, difficulty: 3.5,
+                course: "HYPN 400: Advanced Hypnosis & the Power of Eye Contact",
+                date: "October, 1914", attendance: "Mandatory", forCredit: true, textbook: false, grade: "A-", wouldTakeAgain: true,
+                text: "DO NOT make direct eye contact with Rasputin during lecture. I know the syllabus says 'eye contact is encouraged for learning' but that man's eyes are PORTALS. I looked into them during a demonstration and lost four hours. When I came to, I had written a 20-page essay on the nature of the Russian soul. In Russian. I don't speak Russian. He gave me an A-. I still don't know what I wrote. My roommate says I was 'speaking in tongues' the whole time. Best grade I've ever gotten on an assignment I don't remember writing.",
+                tags: ["Hypnotic Lectures", "Intimidating", "Amazing Lectures"], thumbsUp: 512, thumbsDown: 8
+            },
+            {
+                quality: 2.0, difficulty: 4.0,
+                course: "SURV 600: How to Survive Being Murdered (A Masterclass)",
+                date: "December, 1916", attendance: "Mandatory", forCredit: true, textbook: false, grade: "B", wouldTakeAgain: false,
+                text: "For the final demonstration, Rasputin was poisoned, shot, beaten, and thrown into a frozen river. He showed up to the next lecture. On time. Dripping wet. He said 'as I was saying before I was interrupted.' NO EXPLANATION. The class sat in stunned silence. He then taught a full two-hour lecture on resilience. He's been 'killed' four times this semester alone and he keeps coming back. The administration has stopped trying to process his death certificates. HR gave up. He is genuinely unkillable and I don't know if that's magic or spite.",
+                tags: ["Will Not Die", "Tough Grader", "Intimidating"], thumbsUp: 789, thumbsDown: 4
+            },
+            {
+                quality: 3.0, difficulty: 3.5,
+                course: "WINE 150: Mystical Wine Appreciation & Spiritual Intoxication",
+                date: "March, 1915", attendance: "Not Mandatory", forCredit: false, textbook: false, grade: "A", wouldTakeAgain: true,
+                text: "Easiest class at the Academy. Rasputin brings wine to every lecture. Not for demonstration purposes - he just drinks wine during class. By week 3 he started sharing. By week 6 it was basically a wine club with occasional mystical insights. He said wine 'opens the third eye.' It opened something because after three glasses I could see auras. Or I was drunk. Unclear. The final was a wine tasting where he paired each wine with a spiritual revelation. I paired a Crimean red with 'the futility of earthly ambition.' Got an A. Best Tuesday afternoon of my life.",
+                tags: ["Easy Grader", "Hilarious", "Hypnotic Lectures"], thumbsUp: 534, thumbsDown: 12
+            }
+        ]
     }
 ];
