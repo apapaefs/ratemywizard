@@ -775,6 +775,87 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 25px rgba(107, 33, 168, 0.5);
         }
+
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(147, 51, 234, 0.1);
+            color: var(--primary-light);
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .share-btn:hover {
+            background: rgba(147, 51, 234, 0.2);
+            border-color: var(--primary-light);
+        }
+
+        .share-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .share-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 6px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 8px 0;
+            min-width: 180px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+            z-index: 50;
+        }
+
+        .share-menu.active {
+            display: block;
+        }
+
+        .share-menu a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 16px;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 13px;
+            transition: background 0.15s;
+        }
+
+        .share-menu a:hover {
+            background: rgba(147, 51, 234, 0.15);
+        }
+
+        .share-copied {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--green);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            z-index: 200;
+            display: none;
+            animation: fadeInUp 0.3s ease;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+            to { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
     </style>
 </head>
 <body>
@@ -802,7 +883,7 @@
     <section class="hero" id="hero">
         <div class="hero-content">
             <h1>Join the magical community at <span>RateMyWizard</span></h1>
-            <p>Read and share reviews of wizards, sorcerers, and enchanters from the realms of Middle-earth, Camelot, and beyond.</p>
+            <p>Read and share reviews of wizards, sorcerers, and enchanters from the realms of Middle-earth, Camelot, Greek Mythology and beyond.</p>
         </div>
     </section>
 
@@ -826,965 +907,8 @@
         <p style="margin-top:8px;"><a href="mailto:zard@ratemywizard.com">Contact Us</a></p>
     </footer>
 
+    <script src="wizards-data.js"></script>
     <script>
-    const wizards = [
-        {
-            id: "gandalf",
-            name: "Gandalf the Grey",
-            title: "Istari, Wizard of the Order of Maiar",
-            school: "University of Middle-earth, Shire Campus",
-            department: "Department of Pyrotechnics & Applied Wisdom",
-            image: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Gandalf_fighting_the_Balrog_on_the_bridge_of_Khazad-d%C3%BBm.jpg",
-            quality: 4.8,
-            difficulty: 4.2,
-            wouldTakeAgain: 92,
-            numRatings: 247,
-            hotness: true,
-            tags: ["Inspirational", "Tough Grader", "Gives Good Feedback", "Respected", "Lecture Heavy", "Get Ready to Walk"],
-            ratings: {
-                awesome: 82,
-                great: 10,
-                good: 5,
-                ok: 2,
-                awful: 1
-            },
-            breakdown: {
-                "Knowledge": 5.0,
-                "Accessibility": 2.1,
-                "Clarity": 3.4,
-                "Helpfulness": 4.9,
-                "Charisma": 5.0,
-                "Punctuality": 1.2
-            },
-            reviews: [
-                {
-                    quality: 5.0,
-                    difficulty: 5.0,
-                    course: "WAND 401: Advanced Fireworks & Pyrotechnics",
-                    date: "Oct 14, Third Age 3018",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "A+",
-                    wouldTakeAgain: true,
-                    text: "Gandalf is an INCREDIBLE instructor. His firework displays are literally life-changing. Just be prepared to go on a really long field trip. I signed up for a weekend seminar and ended up gone for over a year. Lost my deposit on my hobbit-hole. 10/10 would follow into Mordor again.",
-                    tags: ["Inspirational", "Tough Grader", "Amazing Lectures"],
-                    thumbsUp: 184,
-                    thumbsDown: 3
-                },
-                {
-                    quality: 5.0,
-                    difficulty: 4.0,
-                    course: "PHIL 301: The Art of Showing Up Precisely When You Mean To",
-                    date: "Mar 5, Third Age 3019",
-                    attendance: "Not Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "B+",
-                    wouldTakeAgain: true,
-                    text: "Great wizard, terrible sense of timing. Says he arrives 'precisely when he means to,' which apparently means three weeks after the assignment deadline. But honestly, the man knows his stuff. His midterm was just him yelling 'YOU SHALL NOT PASS' and failing everyone. Half the class dropped. Legends only survived.",
-                    tags: ["Hilarious", "Skip Class? You Won't Pass", "Tough Grader"],
-                    thumbsUp: 312,
-                    thumbsDown: 8
-                },
-                {
-                    quality: 4.0,
-                    difficulty: 3.0,
-                    course: "LEAD 200: Motivational Speaking for Reluctant Heroes",
-                    date: "Aug 22, Third Age 3018",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "A",
-                    wouldTakeAgain: true,
-                    text: "Prof Gandalf is great but he plays favorites. Gave all the hard assignments to one short kid and basically let the rest of us coast. Also his office hours are impossible - he's either in his office smoking pipe-weed or he's vanished to another realm entirely. No in-between. But when he IS there, best mentor ever.",
-                    tags: ["Caring", "Gives Good Feedback", "Skip Class? You Won't Pass"],
-                    thumbsUp: 156,
-                    thumbsDown: 12
-                },
-                {
-                    quality: 5.0,
-                    difficulty: 5.0,
-                    course: "SURV 500: Bridge Defense & Tactical Retreats",
-                    date: "Jan 15, Third Age 3019",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "A+",
-                    wouldTakeAgain: true,
-                    text: "The final exam was on an actual bridge with an actual Balrog. OSHA would have a field day. But watching the professor literally sacrifice himself to save the class? That's dedication. He came back a week later like nothing happened, wearing all white. Absolute king. Changed my major from Hobbit Studies to Wizardry.",
-                    tags: ["Inspirational", "Lecture Heavy", "Tough Grader"],
-                    thumbsUp: 501,
-                    thumbsDown: 2
-                },
-                {
-                    quality: 4.5,
-                    difficulty: 3.5,
-                    course: "PIPE 101: Introduction to Pipe-weed Appreciation",
-                    date: "Jun 8, Third Age 3017",
-                    attendance: "Not Mandatory",
-                    forCredit: false,
-                    textbook: false,
-                    grade: "A",
-                    wouldTakeAgain: true,
-                    text: "Easiest class I ever took. Prof Gandalf just sits there blowing smoke rings that turn into little ships and butterflies while telling stories about the Elder Days. He grades purely on vibes. I wrote my final paper on 'Longbottom Leaf vs. Old Toby: A Comparative Analysis' and got an A. Would absolutely recommend if you need an elective.",
-                    tags: ["Easy Grader", "Amazing Lectures", "Participation Matters"],
-                    thumbsUp: 203,
-                    thumbsDown: 5
-                }
-            ]
-        },
-        {
-            id: "saruman",
-            name: "Saruman the White",
-            title: "Head of the Istari Order (Formerly)",
-            school: "University of Middle-earth, Isengard Campus",
-            department: "Department of Industrial Magic & Applied Treachery",
-            image: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Curun%C3%ADr.jpg",
-            quality: 1.8,
-            difficulty: 4.9,
-            wouldTakeAgain: 8,
-            numRatings: 163,
-            hotness: false,
-            tags: ["Tough Grader", "Lots of Homework", "Beware of Group Projects", "Test Heavy", "Would Not Recommend"],
-            ratings: {
-                awesome: 3,
-                great: 5,
-                good: 7,
-                ok: 15,
-                awful: 70
-            },
-            breakdown: {
-                "Knowledge": 4.8,
-                "Accessibility": 0.5,
-                "Clarity": 4.1,
-                "Helpfulness": 0.8,
-                "Charisma": 3.9,
-                "Punctuality": 4.5
-            },
-            reviews: [
-                {
-                    quality: 1.0,
-                    difficulty: 5.0,
-                    course: "EVIL 401: Advanced Domination & Realm Conquest",
-                    date: "Sep 20, Third Age 3018",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: true,
-                    grade: "D",
-                    wouldTakeAgain: false,
-                    text: "DO NOT TAKE THIS CLASS. He literally tried to recruit the entire class into his personal army. The 'group project' was building siege weapons in the basement of Orthanc. Half my grade was based on 'loyalty to Saruman' which isn't even a real academic metric. Reported him to the Dean of Wizardry but he IS the Dean so nothing happened.",
-                    tags: ["Tough Grader", "Would Not Recommend", "Beware of Group Projects"],
-                    thumbsUp: 342,
-                    thumbsDown: 7
-                },
-                {
-                    quality: 2.0,
-                    difficulty: 5.0,
-                    course: "ORCH 300: Uruk-hai Management & Breeding Programs",
-                    date: "Nov 3, Third Age 3018",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: true,
-                    grade: "C-",
-                    wouldTakeAgain: false,
-                    text: "His voice is hypnotic and his lectures are strangely compelling. I walked in planning to drop the class and walked out having pledged my firstborn to his cause. Seriously though, bring earplugs. The man could sell sand in the Harad desert. Also he clear-cut the entire campus forest for 'lab materials.' The Ents were NOT happy.",
-                    tags: ["Lecture Heavy", "Participation Matters", "Beware of Group Projects"],
-                    thumbsUp: 278,
-                    thumbsDown: 11
-                },
-                {
-                    quality: 1.0,
-                    difficulty: 5.0,
-                    course: "TECH 450: Forbidden Technologies & Ring-craft",
-                    date: "Dec 1, Third Age 3018",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: true,
-                    grade: "F",
-                    wouldTakeAgain: false,
-                    text: "The textbook was literally written in Black Speech. The midterm was building a palantir from scratch. When I asked for extra credit he looked into my soul through a crystal ball and told me my family's deepest secrets. I have filed seven complaints. He gave me an F for 'insufficient ambition.' I just wanted to learn basic enchantments bro.",
-                    tags: ["Tough Grader", "Lots of Homework", "Would Not Recommend"],
-                    thumbsUp: 415,
-                    thumbsDown: 4
-                },
-                {
-                    quality: 3.0,
-                    difficulty: 4.0,
-                    course: "RHET 350: Persuasive Speaking & Voice of Command",
-                    date: "Jul 17, Third Age 3017",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "B",
-                    wouldTakeAgain: false,
-                    text: "OK I'll give him this - the man can SPEAK. Best lecturer I've ever had, honestly. His voice is like butter and thunder had a baby. The problem is he uses his teaching abilities for evil. My roommate took this class and now he's living in a tower somewhere calling himself 'The Hand of Saruman.' Please help.",
-                    tags: ["Amazing Lectures", "Lecture Heavy", "Participation Matters"],
-                    thumbsUp: 198,
-                    thumbsDown: 15
-                },
-                {
-                    quality: 1.0,
-                    difficulty: 5.0,
-                    course: "MGMT 500: Multi-campus Administrative Leadership",
-                    date: "Feb 2, Third Age 3019",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: true,
-                    grade: "F",
-                    wouldTakeAgain: false,
-                    text: "UPDATE: the Ents literally destroyed the entire campus. The library is underwater. My thesis was in there. Saruman is currently locked in his office tower refusing to come out. Class is cancelled indefinitely. I still owe tuition. This is the worst university experience of all three Ages. Transferring to Rivendell Community College.",
-                    tags: ["Would Not Recommend", "Tough Grader", "Skip Class? You Won't Pass"],
-                    thumbsUp: 567,
-                    thumbsDown: 2
-                }
-            ]
-        },
-        {
-            id: "merlin",
-            name: "Merlin",
-            title: "Court Wizard & Chief Adviser to King Arthur",
-            school: "Royal Academy of Camelot",
-            department: "Department of Prophecy, Shapeshifting & Royal Advisory",
-            image: "https://upload.wikimedia.org/wikipedia/commons/7/79/Arthur-Pyle_The_Enchanter_Merlin.JPG",
-            quality: 4.2,
-            difficulty: 3.5,
-            wouldTakeAgain: 78,
-            numRatings: 189,
-            hotness: false,
-            tags: ["Respected", "Caring", "Tough Grader", "Gives Good Feedback", "Inspirational", "Confusing Sometimes"],
-            ratings: {
-                awesome: 58,
-                great: 20,
-                good: 12,
-                ok: 7,
-                awful: 3
-            },
-            breakdown: {
-                "Knowledge": 5.0,
-                "Accessibility": 3.8,
-                "Clarity": 2.8,
-                "Helpfulness": 4.5,
-                "Charisma": 4.2,
-                "Punctuality": 2.0
-            },
-            reviews: [
-                {
-                    quality: 5.0,
-                    difficulty: 3.0,
-                    course: "PROPH 301: Introduction to Prophecy & Cryptic Warnings",
-                    date: "Spring, Year of Our Lord 512",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "A-",
-                    wouldTakeAgain: true,
-                    text: "Merlin is brilliant but he teaches the entire course backwards. Literally. He starts with the final exam and works toward the first lecture. Says he 'lives in reverse' which I'm pretty sure is not an accredited teaching method. But somehow I learned more in this class than any other. His prophecies for the midterm were spot on - because he already knew the answers. Is that cheating? I genuinely don't know.",
-                    tags: ["Inspirational", "Gives Good Feedback", "Lecture Heavy"],
-                    thumbsUp: 267,
-                    thumbsDown: 9
-                },
-                {
-                    quality: 4.0,
-                    difficulty: 4.0,
-                    course: "SHFT 250: Practical Shapeshifting & Animal Transformations",
-                    date: "Autumn, Year of Our Lord 510",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "B+",
-                    wouldTakeAgain: true,
-                    text: "Fun class but the practicals are INSANE. For the midterm he turned the entire class into squirrels and we had to find our way back to the lecture hall. Three students are still missing. He says they'll 'find their way back when the time is right' which is NOT a satisfactory answer, Merlin. Also he turned himself into a fish once and forgot to change back for two weeks. Class was cancelled.",
-                    tags: ["Caring", "Tough Grader", "Participation Matters"],
-                    thumbsUp: 312,
-                    thumbsDown: 14
-                },
-                {
-                    quality: 3.5,
-                    difficulty: 4.0,
-                    course: "ADVS 400: Royal Advisory & Kingmaking Seminar",
-                    date: "Winter, Year of Our Lord 513",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "B",
-                    wouldTakeAgain: true,
-                    text: "Merlin clearly plays favorites. The entire curriculum revolves around this ONE student named Arthur. We get it, Merlin, he's the chosen one. The rest of us are just trying to pass. For the final project he made Arthur pull a sword from a rock and gave him an A+. Meanwhile I wrote a 40-page thesis on medieval governance and got a B. The favoritism is unreal. Still a good teacher though.",
-                    tags: ["Respected", "Tough Grader", "Gives Good Feedback"],
-                    thumbsUp: 445,
-                    thumbsDown: 18
-                },
-                {
-                    quality: 4.5,
-                    difficulty: 3.0,
-                    course: "ENCH 201: Enchantments, Glamours & Practical Illusions",
-                    date: "Summer, Year of Our Lord 511",
-                    attendance: "Not Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "A",
-                    wouldTakeAgain: true,
-                    text: "Best elective at Camelot by far. Merlin taught us to enchant swords, create illusions, and talk to animals. He's incredibly patient and actually cares about his students. My only complaint is his office hours are in a cave. An actual cave. In the woods. With bats. He says it 'enhances the mystical atmosphere.' Sir, it enhances my anxiety. Still, fantastic wizard. 100% recommend.",
-                    tags: ["Caring", "Amazing Lectures", "Inspirational"],
-                    thumbsUp: 289,
-                    thumbsDown: 6
-                },
-                {
-                    quality: 4.0,
-                    difficulty: 3.5,
-                    course: "HIST 100: The Once & Future Curriculum",
-                    date: "Spring, Year of Our Lord 514",
-                    attendance: "Not Mandatory",
-                    forCredit: false,
-                    textbook: false,
-                    grade: "A-",
-                    wouldTakeAgain: true,
-                    text: "Merlin keeps spoiling future events in his history lectures. He accidentally told us how the kingdom ends, who betrays whom, and which knights don't make it. Then he said 'oops, you weren't supposed to know that yet' and tried to make us forget with a spell. It didn't fully work. I now have vague anxiety about someone named Mordred. Great class otherwise, very engaging.",
-                    tags: ["Hilarious", "Amazing Lectures", "Gives Good Feedback"],
-                    thumbsUp: 378,
-                    thumbsDown: 7
-                }
-            ]
-        },
-        {
-            id: "prospero",
-            name: "Prospero",
-            title: "Duke of Milan & Sorcerer Supreme of the Isle",
-            school: "Tempest Island Magical Academy",
-            department: "Department of Theatrical Sorcery & Spirit Binding",
-            image: "https://upload.wikimedia.org/wikipedia/commons/9/9e/1797_Hamilton_Prospero_%26_Ariel_anagoria.JPG",
-            quality: 3.8,
-            difficulty: 4.5,
-            wouldTakeAgain: 65,
-            numRatings: 134,
-            hotness: false,
-            tags: ["Respected", "Tough Grader", "Lecture Heavy", "Gives Good Feedback", "Extra Credit", "Dramatic"],
-            ratings: {
-                awesome: 42,
-                great: 23,
-                good: 18,
-                ok: 10,
-                awful: 7
-            },
-            breakdown: {
-                "Knowledge": 4.7,
-                "Accessibility": 2.5,
-                "Clarity": 3.2,
-                "Helpfulness": 3.9,
-                "Charisma": 4.8,
-                "Punctuality": 3.5
-            },
-            reviews: [
-                {
-                    quality: 4.0,
-                    difficulty: 5.0,
-                    course: "SPRT 401: Advanced Spirit Summoning & Binding",
-                    date: "Autumn 1611",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: true,
-                    grade: "B+",
-                    wouldTakeAgain: true,
-                    text: "Prospero is brilliant but his teaching assistant Ariel does literally ALL the work. I'm pretty sure Ariel grades our papers, runs the labs, controls the weather for outdoor lectures, AND handles course logistics. Meanwhile Prospero stands at the front monologuing about betrayal and rightful dukedoms. Sir, this is a sorcery class. Still, the spirit summoning practicals were incredible.",
-                    tags: ["Lecture Heavy", "Tough Grader", "Respected"],
-                    thumbsUp: 187,
-                    thumbsDown: 12
-                },
-                {
-                    quality: 3.5,
-                    difficulty: 4.5,
-                    course: "TEMP 300: Weather Manipulation & Storm Theory",
-                    date: "Spring 1610",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "B",
-                    wouldTakeAgain: true,
-                    text: "For the final he conjured an ACTUAL tempest and shipwrecked the visiting dean's boat. Said it was 'part of the curriculum.' The dean was furious. Prospero was somehow promoted. Also he keeps his daughter locked in the classroom and won't let her talk to any male students. Extremely awkward energy. Good weather spells though.",
-                    tags: ["Tough Grader", "Dramatic", "Amazing Lectures"],
-                    thumbsUp: 156,
-                    thumbsDown: 8
-                },
-                {
-                    quality: 4.5,
-                    difficulty: 4.0,
-                    course: "DRAM 250: Revenge, Forgiveness & the Dramatic Arts",
-                    date: "Winter 1611",
-                    attendance: "Not Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "A-",
-                    wouldTakeAgain: true,
-                    text: "This class changed my life. Prospero spent 12 weeks teaching us elaborate revenge schemes and then in the final lecture said 'actually, forgiveness is better' and made us write a reflection essay. The whole semester was an elaborate setup for a moral lesson. Absolute madman. I cried. Several students cried. Even Ariel cried and they're a spirit.",
-                    tags: ["Inspirational", "Caring", "Gives Good Feedback"],
-                    thumbsUp: 234,
-                    thumbsDown: 5
-                },
-                {
-                    quality: 3.0,
-                    difficulty: 5.0,
-                    course: "ISLE 100: Island Survival & Magical Self-Sufficiency",
-                    date: "Summer 1609",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: true,
-                    grade: "C+",
-                    wouldTakeAgain: false,
-                    text: "He stranded us on an island for the entire semester. No wifi. No boats. Just vibes and a monster named Caliban who kept trying to steal our lunches. Prospero said it was 'experiential learning.' I said it was a violation of several maritime laws. He broke his staff at the end of term and said he was retiring. He did not retire. He's teaching again next semester.",
-                    tags: ["Tough Grader", "Would Not Recommend", "Participation Matters"],
-                    thumbsUp: 301,
-                    thumbsDown: 14
-                }
-            ]
-        },
-        {
-            id: "rincewind",
-            name: "Rincewind",
-            title: "Wizzard (Self-Proclaimed)",
-            school: "Unseen University, Ankh-Morpork",
-            department: "Department of Running Away & Applied Cowardice",
-            image: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Rincewind.jpg",
-            quality: 2.3,
-            difficulty: 1.5,
-            wouldTakeAgain: 45,
-            numRatings: 198,
-            hotness: false,
-            tags: ["Easy Grader", "Would Not Recommend", "Hilarious", "Often Absent", "No Homework", "Brings Luggage"],
-            ratings: {
-                awesome: 15,
-                great: 12,
-                good: 18,
-                ok: 25,
-                awful: 30
-            },
-            breakdown: {
-                "Knowledge": 1.2,
-                "Accessibility": 4.8,
-                "Clarity": 1.5,
-                "Helpfulness": 2.0,
-                "Charisma": 3.5,
-                "Punctuality": 0.8
-            },
-            reviews: [
-                {
-                    quality: 2.0,
-                    difficulty: 1.0,
-                    course: "WIZZD 101: Introduction to Wizzardry (Note the Spelling)",
-                    date: "Grune 14, Century of the Fruitbat",
-                    attendance: "Not Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "B",
-                    wouldTakeAgain: false,
-                    text: "This man cannot cast a single spell. Not one. He knows ONE spell and it's so dangerous he can't even use it. The entire course was him explaining why magic is too dangerous to actually do, which is a bold strategy for a magic school. His hat says 'WIZZARD' on it which should tell you everything about his attention to detail. Easy A though because he's too scared to fail anyone.",
-                    tags: ["Easy Grader", "No Homework", "Would Not Recommend"],
-                    thumbsUp: 234,
-                    thumbsDown: 18
-                },
-                {
-                    quality: 3.0,
-                    difficulty: 1.0,
-                    course: "SURV 200: Survival Through Strategic Cowardice",
-                    date: "Spune 3, Century of the Fruitbat",
-                    attendance: "Not Mandatory",
-                    forCredit: false,
-                    textbook: false,
-                    grade: "A",
-                    wouldTakeAgain: true,
-                    text: "OK hear me out - this class is actually useful. Rincewind has survived dragons, gods, eldritch horrors, trips to hell, and the Dungeon Dimensions. His secret? Running away really fast. The man has a PhD in fleeing. The final exam was a timed sprint. I've never been more prepared for the real world. Also his sentient luggage ate someone's backpack.",
-                    tags: ["Hilarious", "Easy Grader", "Participation Matters"],
-                    thumbsUp: 367,
-                    thumbsDown: 9
-                },
-                {
-                    quality: 1.0,
-                    difficulty: 2.0,
-                    course: "GEOG 350: Involuntary World Travel & Accidental Tourism",
-                    date: "Offle 22, Century of the Fruitbat",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "C",
-                    wouldTakeAgain: false,
-                    text: "Class was supposed to be on Tuesdays and Thursdays. Professor Rincewind showed up to the first lecture, got accidentally teleported to the Counterweight Continent, and didn't come back for four months. The TA had to teach the rest. When Rincewind finally returned he gave everyone a C and said 'you're lucky to be alive' as if WE were the ones who went missing. Unbelievable.",
-                    tags: ["Often Absent", "Would Not Recommend", "Skip Class? You Won't Pass"],
-                    thumbsUp: 198,
-                    thumbsDown: 22
-                },
-                {
-                    quality: 3.0,
-                    difficulty: 2.0,
-                    course: "LING 150: Multilingual Screaming Across Cultures",
-                    date: "Sektober 8, Century of the Fruitbat",
-                    attendance: "Not Mandatory",
-                    forCredit: false,
-                    textbook: false,
-                    grade: "A-",
-                    wouldTakeAgain: true,
-                    text: "Rincewind can say 'HELP' and 'OH NO' in every language on the Disc, and honestly? That's more useful than anything I learned in Advanced Thaumaturgy. He taught us how to express existential terror in 47 languages. The midterm was just screaming. I got an A-. The Luggage sat in the back row the entire semester and nobody acknowledged it. Best elective ever.",
-                    tags: ["Hilarious", "Easy Grader", "Amazing Lectures"],
-                    thumbsUp: 445,
-                    thumbsDown: 6
-                }
-            ]
-        },
-        {
-            id: "morgan",
-            name: "Morgan le Fay",
-            title: "Enchantress, Queen of Avalon",
-            school: "Royal Academy of Camelot",
-            department: "Department of Enchantment, Dark Arts & Political Intrigue",
-            image: "https://upload.wikimedia.org/wikipedia/commons/b/bc/Sandys%2C_Frederick_-_Morgan_le_Fay.JPG",
-            quality: 3.5,
-            difficulty: 4.8,
-            wouldTakeAgain: 55,
-            numRatings: 176,
-            hotness: true,
-            tags: ["Tough Grader", "Respected", "Intimidating", "Amazing Lectures", "Extra Credit", "Will Change Your Life"],
-            ratings: {
-                awesome: 35,
-                great: 20,
-                good: 15,
-                ok: 15,
-                awful: 15
-            },
-            breakdown: {
-                "Knowledge": 5.0,
-                "Accessibility": 2.0,
-                "Clarity": 4.0,
-                "Helpfulness": 2.8,
-                "Charisma": 4.9,
-                "Punctuality": 3.8
-            },
-            reviews: [
-                {
-                    quality: 4.0,
-                    difficulty: 5.0,
-                    course: "DARK 401: Advanced Dark Enchantments & Hexwork",
-                    date: "Autumn, Year of Our Lord 508",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: true,
-                    grade: "B-",
-                    wouldTakeAgain: true,
-                    text: "Morgan le Fay is TERRIFYING and BRILLIANT. She walks into lecture and the temperature drops ten degrees. Her office hours are by appointment only and the appointment is whenever she decides to appear in a cloud of mist. The hexwork practicals were incredible though. I can now curse someone's entire bloodline. Not sure when I'll use this but it's nice to have the option.",
-                    tags: ["Tough Grader", "Amazing Lectures", "Intimidating"],
-                    thumbsUp: 267,
-                    thumbsDown: 14
-                },
-                {
-                    quality: 3.0,
-                    difficulty: 5.0,
-                    course: "POLI 450: Court Intrigue & Magical Statecraft",
-                    date: "Winter, Year of Our Lord 510",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "C+",
-                    wouldTakeAgain: false,
-                    text: "Half the course is just her complaining about her brother Arthur. We get it, you have family issues. The other half is genuinely brilliant political strategy. She made us write a 30-page paper on 'How to Undermine a Kingdom Without Anyone Noticing.' Mine got a C+ because she said my schemes were 'too obvious.' Ma'am, I'm 19. How devious do you expect me to be?",
-                    tags: ["Tough Grader", "Lots of Homework", "Lecture Heavy"],
-                    thumbsUp: 312,
-                    thumbsDown: 18
-                },
-                {
-                    quality: 4.5,
-                    difficulty: 4.0,
-                    course: "HEAL 300: Healing Arts & Restorative Magic",
-                    date: "Spring, Year of Our Lord 509",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: true,
-                    grade: "A-",
-                    wouldTakeAgain: true,
-                    text: "People forget Morgan is also an incredible healer. This class was amazing. She taught us herbal medicine, wound magic, and poison identification (she was VERY thorough on poisons). The final was treating a knight who'd been cursed - I saved his life and she actually smiled at me. First recorded instance of Morgan le Fay smiling in 200 years. Put it on my resume.",
-                    tags: ["Caring", "Gives Good Feedback", "Inspirational"],
-                    thumbsUp: 198,
-                    thumbsDown: 7
-                },
-                {
-                    quality: 2.5,
-                    difficulty: 5.0,
-                    course: "SHFT 500: Advanced Shapeshifting & Identity Deception",
-                    date: "Summer, Year of Our Lord 511",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "B",
-                    wouldTakeAgain: false,
-                    text: "The midterm was impersonating a member of the royal court for 48 hours without being detected. One student accidentally started a war. Another married into the royal family and can't figure out how to undo it. Morgan said both outcomes were 'acceptable.' She's running a spy school and calling it higher education. Incredible instructor, questionable ethics.",
-                    tags: ["Tough Grader", "Intimidating", "Participation Matters"],
-                    thumbsUp: 389,
-                    thumbsDown: 11
-                }
-            ]
-        },
-        {
-            id: "circe",
-            name: "Circe",
-            title: "Goddess of Sorcery, Daughter of Helios",
-            school: "Aeaea Institute of Divine Magic",
-            department: "Department of Transmutation, Potions & Hospitality",
-            image: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Circe_Offering_the_Cup_to_Odysseus.jpg",
-            quality: 3.2,
-            difficulty: 4.6,
-            wouldTakeAgain: 42,
-            numRatings: 215,
-            hotness: true,
-            tags: ["Tough Grader", "Beware of Group Projects", "Amazing Lectures", "Don't Eat the Food", "Respected", "Test Heavy"],
-            ratings: {
-                awesome: 28,
-                great: 18,
-                good: 20,
-                ok: 14,
-                awful: 20
-            },
-            breakdown: {
-                "Knowledge": 5.0,
-                "Accessibility": 3.0,
-                "Clarity": 4.2,
-                "Helpfulness": 2.5,
-                "Charisma": 4.7,
-                "Punctuality": 4.0
-            },
-            reviews: [
-                {
-                    quality: 2.0,
-                    difficulty: 5.0,
-                    course: "TRNS 401: Advanced Transmutation & Polymorphy",
-                    date: "Spring, 1250 BCE",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "C",
-                    wouldTakeAgain: false,
-                    text: "DO NOT eat anything she offers you. I cannot stress this enough. Three students got turned into pigs during the welcome reception. She said it was 'a lesson in consent and caution' but I'm pretty sure she just thinks it's funny. One guy has been a pig for three semesters now. He's doing well academically but socially it's rough. The transmutation techniques themselves are top-notch, if you survive.",
-                    tags: ["Tough Grader", "Don't Eat the Food", "Would Not Recommend"],
-                    thumbsUp: 456,
-                    thumbsDown: 8
-                },
-                {
-                    quality: 4.5,
-                    difficulty: 4.0,
-                    course: "POTI 350: Divine Potions & Pharmaceutical Sorcery",
-                    date: "Autumn, 1251 BCE",
-                    attendance: "Not Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "A",
-                    wouldTakeAgain: true,
-                    text: "If you can get past the whole 'turning students into animals' thing, Circe is genuinely one of the best potions instructors in the ancient world. Her knowledge of herbs is encyclopedic. She taught us to brew potions that can heal wounds, grant visions, and yes, transform people into livestock. I got an A because my swine potion had 'excellent consistency.' My parents are confused but proud.",
-                    tags: ["Amazing Lectures", "Gives Good Feedback", "Respected"],
-                    thumbsUp: 234,
-                    thumbsDown: 12
-                },
-                {
-                    quality: 3.5,
-                    difficulty: 5.0,
-                    course: "HOST 200: Hospitality, Deception & Dinner Party Sorcery",
-                    date: "Summer, 1249 BCE",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "B+",
-                    wouldTakeAgain: true,
-                    text: "The final was hosting a dinner party for visiting heroes without any of them suspecting they were being tested. One student accidentally poisoned Odysseus's crew. Well, I say 'accidentally.' Circe gave her extra credit. The grading rubric includes 'quality of enchanted ambiance' and 'subtlety of magical manipulation.' It's basically a hospitality degree from hell. Loved it.",
-                    tags: ["Participation Matters", "Tough Grader", "Amazing Lectures"],
-                    thumbsUp: 289,
-                    thumbsDown: 15
-                },
-                {
-                    quality: 3.0,
-                    difficulty: 4.5,
-                    course: "MYTH 100: Living as an Immortal in the Modern Age",
-                    date: "Winter, 1250 BCE",
-                    attendance: "Not Mandatory",
-                    forCredit: false,
-                    textbook: false,
-                    grade: "A-",
-                    wouldTakeAgain: true,
-                    text: "Circe has been alive for thousands of years and she is TIRED. Half the lectures are her complaining about heroes showing up to her island uninvited. She spent an entire class on Odysseus - how he stayed for a year, ate all her food, and then left without even a thank-you note. She's still mad. It's been centuries. I relate to this energy deeply. Very cathartic class.",
-                    tags: ["Hilarious", "Caring", "Lecture Heavy"],
-                    thumbsUp: 367,
-                    thumbsDown: 9
-                }
-            ]
-        },
-        {
-            id: "radagast",
-            name: "Radagast the Brown",
-            title: "Istari, Guardian of Flora & Fauna",
-            school: "University of Middle-earth, Mirkwood Campus",
-            department: "Department of Nature Magic & Woodland Conservation",
-            image: "https://upload.wikimedia.org/wikipedia/commons/8/84/Radagast_the_Brown%2C_Weta_Exhibit%2C_Seoul%2C_South_Korea_%2815153582065%29.jpg",
-            quality: 3.9,
-            difficulty: 2.0,
-            wouldTakeAgain: 82,
-            numRatings: 112,
-            hotness: false,
-            tags: ["Caring", "Easy Grader", "Inspirational", "Often Absent", "Bring Allergy Meds", "Office is Outdoors"],
-            ratings: {
-                awesome: 48,
-                great: 22,
-                good: 15,
-                ok: 10,
-                awful: 5
-            },
-            breakdown: {
-                "Knowledge": 4.5,
-                "Accessibility": 4.2,
-                "Clarity": 2.5,
-                "Helpfulness": 4.8,
-                "Charisma": 3.2,
-                "Punctuality": 1.5
-            },
-            reviews: [
-                {
-                    quality: 4.5,
-                    difficulty: 1.0,
-                    course: "BIRD 101: Introduction to Avian Communication",
-                    date: "May 12, Third Age 3015",
-                    attendance: "Not Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "A",
-                    wouldTakeAgain: true,
-                    text: "Radagast showed up to the first lecture with seventeen birds nesting in his hair and a hedgehog in his pocket. He spent 45 minutes having a conversation with a thrush before remembering we were there. The man is an absolute sweetheart. He grades based on how nicely you talk to animals. I got an A for calling a sparrow 'handsome.' Best class I've ever taken.",
-                    tags: ["Easy Grader", "Caring", "Amazing Lectures"],
-                    thumbsUp: 198,
-                    thumbsDown: 4
-                },
-                {
-                    quality: 4.0,
-                    difficulty: 2.0,
-                    course: "HERB 250: Magical Herbalism & Forest Pharmacology",
-                    date: "Sep 3, Third Age 3016",
-                    attendance: "Not Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "A-",
-                    wouldTakeAgain: true,
-                    text: "Class is held entirely outdoors in Mirkwood, which is great except for the giant spiders. Radagast says they're 'misunderstood.' They are NOT misunderstood, they are ENORMOUS and HUNGRY. That said, his knowledge of magical plants is unmatched. He taught me to identify 200 species of healing herbs. He also ate several mushrooms during lecture and started talking to a tree for 20 minutes. The tree, apparently, talked back.",
-                    tags: ["Caring", "Office is Outdoors", "Bring Allergy Meds"],
-                    thumbsUp: 245,
-                    thumbsDown: 8
-                },
-                {
-                    quality: 3.5,
-                    difficulty: 2.5,
-                    course: "CONS 300: Woodland Conservation & Anti-Corruption Magic",
-                    date: "Mar 17, Third Age 3017",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "B+",
-                    wouldTakeAgain: true,
-                    text: "Radagast cancelled class for three weeks because a family of rabbits moved into the lecture hall and he didn't want to disturb them. When he came back he gave us all B+ for 'patience and respect for nature.' The man has completely different priorities than every other professor at this university and honestly? He might be the only sane one. His rabbit sled is sick btw.",
-                    tags: ["Easy Grader", "Often Absent", "Caring"],
-                    thumbsUp: 312,
-                    thumbsDown: 6
-                },
-                {
-                    quality: 3.5,
-                    difficulty: 3.0,
-                    course: "DARK 150: Recognizing Dark Magic in Natural Environments",
-                    date: "Nov 8, Third Age 3018",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "B",
-                    wouldTakeAgain: true,
-                    text: "This class got REAL very fast. Started as a chill nature walk identifying corrupted plants and ended with Radagast discovering an actual Necromancer in Dol Guldur. Our field trip became a reconnaissance mission. He reported it to Gandalf and Saruman but they told him he was 'overreacting.' He was NOT overreacting. Saruman literally turned evil like two years later. Listen to Radagast, people.",
-                    tags: ["Inspirational", "Participation Matters", "Tough Grader"],
-                    thumbsUp: 278,
-                    thumbsDown: 3
-                }
-            ]
-        },
-        {
-            id: "teiresias",
-            name: "Teiresias",
-            title: "Blind Prophet of Thebes",
-            school: "Theban Academy of Divination",
-            department: "Department of Prophecy, Fate & Uncomfortable Truths",
-            image: "https://upload.wikimedia.org/wikipedia/commons/1/14/John_Henry_Fuseli_-_Teiresias_Foretells_the_Future_to_Odysseus%2C_1780-1785_-_Google_Art_Project.jpg",
-            quality: 4.0,
-            difficulty: 4.7,
-            wouldTakeAgain: 58,
-            numRatings: 203,
-            hotness: false,
-            tags: ["Tough Grader", "Respected", "Lecture Heavy", "No Textbook Needed", "Will Ruin Your Day", "Always Right"],
-            ratings: {
-                awesome: 40,
-                great: 22,
-                good: 15,
-                ok: 10,
-                awful: 13
-            },
-            breakdown: {
-                "Knowledge": 5.0,
-                "Accessibility": 3.2,
-                "Clarity": 4.5,
-                "Helpfulness": 2.8,
-                "Charisma": 3.5,
-                "Punctuality": 4.0
-            },
-            reviews: [
-                {
-                    quality: 5.0,
-                    difficulty: 5.0,
-                    course: "PRPH 500: Advanced Prophecy & Inevitable Doom",
-                    date: "Spring, 1250 BCE",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "A-",
-                    wouldTakeAgain: true,
-                    text: "Teiresias is hands down the most knowledgeable professor at this institution. He's also the most depressing. Every single lecture ends with someone finding out something horrible about their future. A kid asked what grade he'd get on the final and Teiresias said 'you will pass the exam but fail at love.' Sir, this is a divination class, not therapy. Still, the man has never been wrong. Not once. Terrifying.",
-                    tags: ["Respected", "Tough Grader", "Will Ruin Your Day"],
-                    thumbsUp: 345,
-                    thumbsDown: 8
-                },
-                {
-                    quality: 4.0,
-                    difficulty: 5.0,
-                    course: "FATE 400: Interpreting the Will of the Gods",
-                    date: "Autumn, 1248 BCE",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "B",
-                    wouldTakeAgain: true,
-                    text: "The midterm was interpreting a set of omens. I said the flight pattern of birds indicated a good harvest. Teiresias said I was wrong and that it indicated King Oedipus had married his own mother. HOW was I supposed to get that from bird patterns?? He said 'the signs were obvious' and docked me a full letter grade. The man is blind and still sees more than all of us combined. Humbling.",
-                    tags: ["Tough Grader", "Always Right", "Lecture Heavy"],
-                    thumbsUp: 478,
-                    thumbsDown: 12
-                },
-                {
-                    quality: 3.5,
-                    difficulty: 4.5,
-                    course: "DEAD 350: Communicating from the Underworld (Guest Lecture Series)",
-                    date: "Winter, 1249 BCE",
-                    attendance: "Not Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "B+",
-                    wouldTakeAgain: false,
-                    text: "Teiresias gave this lecture while DEAD. He is literally teaching from the underworld. Odysseus had to pour blood into a trench so the professor could manifest and deliver the lecture. The logistics alone are a nightmare. He's still the clearest lecturer in the department even as a shade. I asked if being dead affected his teaching and he said 'I can see more clearly now than I ever did alive.' Chills.",
-                    tags: ["Amazing Lectures", "Respected", "Lecture Heavy"],
-                    thumbsUp: 523,
-                    thumbsDown: 5
-                },
-                {
-                    quality: 4.0,
-                    difficulty: 4.0,
-                    course: "TRTH 200: Truth-Telling & Why Nobody Wants to Hear It",
-                    date: "Summer, 1251 BCE",
-                    attendance: "Not Mandatory",
-                    forCredit: false,
-                    textbook: false,
-                    grade: "A",
-                    wouldTakeAgain: true,
-                    text: "This class should be required for all students. Teiresias spent the whole semester teaching us how to deliver devastating truths to powerful people who don't want to hear them. His case studies included telling Oedipus he killed his father, telling Creon he's an idiot, and informing Narcissus about his self-obsession problem. The final was telling your roommate their cooking is bad. I got an A. My roommate isn't speaking to me.",
-                    tags: ["Inspirational", "Hilarious", "Gives Good Feedback"],
-                    thumbsUp: 389,
-                    thumbsDown: 14
-                }
-            ]
-        },
-        {
-            id: "pythia",
-            name: "The Pythia",
-            title: "Oracle of Delphi, Voice of Apollo",
-            school: "Temple of Apollo at Delphi",
-            department: "Department of Divine Communication & Cryptic Utterances",
-            image: "https://upload.wikimedia.org/wikipedia/commons/d/d6/John_Collier_-_Priestess_of_Delphi.jpg",
-            quality: 3.6,
-            difficulty: 4.9,
-            wouldTakeAgain: 52,
-            numRatings: 241,
-            hotness: true,
-            tags: ["Tough Grader", "Amazing Lectures", "Confusing Sometimes", "Respected", "No Textbook Needed", "Bring Offerings"],
-            ratings: {
-                awesome: 35,
-                great: 18,
-                good: 17,
-                ok: 15,
-                awful: 15
-            },
-            breakdown: {
-                "Knowledge": 5.0,
-                "Accessibility": 1.5,
-                "Clarity": 1.0,
-                "Helpfulness": 3.5,
-                "Charisma": 4.8,
-                "Punctuality": 2.5
-            },
-            reviews: [
-                {
-                    quality: 4.0,
-                    difficulty: 5.0,
-                    course: "ORAC 401: Advanced Oracular Interpretation",
-                    date: "Spring, 480 BCE",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "B",
-                    wouldTakeAgain: true,
-                    text: "The Pythia is the most powerful seer in the known world and also the most impossible professor to understand. She delivers every lecture in a trance, sitting on a tripod over volcanic fumes, speaking in riddles. I asked what chapters to study for the final and she said 'the wooden wall shall not fall.' MA'AM. I just need a page number. Had to sacrifice a goat just to get office hours. Her prophecies are always right though, you just won't understand them until it's too late.",
-                    tags: ["Confusing Sometimes", "Tough Grader", "Respected"],
-                    thumbsUp: 412,
-                    thumbsDown: 15
-                },
-                {
-                    quality: 3.0,
-                    difficulty: 5.0,
-                    course: "DIVM 300: Introduction to Divine Mediumship",
-                    date: "Autumn, 481 BCE",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "C+",
-                    wouldTakeAgain: false,
-                    text: "You have to bring an offering to every class. EVERY CLASS. First week it was barley cakes. Then a laurel branch. By midterms she wanted a live goat. I'm a student. I cannot afford a goat per lecture. The actual channeling techniques are incredible but the supply costs are bankrupting me. Also the classroom is full of ethylene gas from a crack in the floor and everyone gets lightheaded by the second hour. OSHA does not exist here and it shows.",
-                    tags: ["Bring Offerings", "Tough Grader", "Would Not Recommend"],
-                    thumbsUp: 356,
-                    thumbsDown: 18
-                },
-                {
-                    quality: 4.5,
-                    difficulty: 5.0,
-                    course: "RIDL 450: The Art of the Ambiguous Answer",
-                    date: "Winter, 479 BCE",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "A-",
-                    wouldTakeAgain: true,
-                    text: "This class is GENIUS. The Pythia taught us how to give prophecies that are technically always correct no matter what happens. King Croesus asked if he should go to war and she said 'a great empire will be destroyed.' It was HIS empire. Technically correct. The best kind of correct. My final project was prophesying my roommate's love life in a way that covered all outcomes. Got an A-. She said my ambiguity 'showed promise but lacked divine inspiration.' Fair.",
-                    tags: ["Amazing Lectures", "Inspirational", "Hilarious"],
-                    thumbsUp: 534,
-                    thumbsDown: 7
-                },
-                {
-                    quality: 3.0,
-                    difficulty: 4.5,
-                    course: "RITE 100: Sacred Rituals & Temple Protocol",
-                    date: "Summer, 480 BCE",
-                    attendance: "Mandatory",
-                    forCredit: true,
-                    textbook: false,
-                    grade: "B-",
-                    wouldTakeAgain: false,
-                    text: "The Pythia only teaches on the seventh day of each month because that's Apollo's sacred day. So we had one class per month. Each class was four hours of rituals, fasting, and bathing in a sacred spring before she'd even start the lecture. I lost 15 pounds this semester. She gave me a B- because my ritual purification was 'spiritually adequate but lacking in reverence.' I was SHIVERING in a COLD SPRING at DAWN. How reverent can a person be??",
-                    tags: ["Tough Grader", "Bring Offerings", "Participation Matters"],
-                    thumbsUp: 298,
-                    thumbsDown: 11
-                }
-            ]
-        }
-    ];
-
     function getQualityClass(q) {
         if (q >= 3.5) return 'quality-good';
         if (q >= 2.5) return 'quality-mid';
@@ -1845,6 +969,7 @@
         const w = wizards.find(x => x.id === id);
         if (!w) return;
 
+        window.location.hash = 'wizard=' + id;
         document.getElementById('homeView').style.display = 'none';
         document.getElementById('hero').style.display = 'none';
         const detail = document.getElementById('detailView');
@@ -1881,6 +1006,18 @@
                     </div>
                     <div class="detail-tags">
                         ${w.tags.map(t => `<span class="detail-tag">${t}</span>`).join('')}
+                    </div>
+                    <div style="margin-top:16px">
+                        <div class="share-dropdown">
+                            <button class="share-btn" onclick="event.stopPropagation(); toggleShare('share-${w.id}')">📤 Share this wizard</button>
+                            <div class="share-menu" id="share-${w.id}">
+                                <a href="#" onclick="event.preventDefault(); shareTwitter('${w.id}')">🐦 Share on X / Twitter</a>
+                                <a href="#" onclick="event.preventDefault(); shareFacebook('${w.id}')">📘 Share on Facebook</a>
+                                <a href="#" onclick="event.preventDefault(); shareReddit('${w.id}')">🟠 Share on Reddit</a>
+                                <a href="#" onclick="event.preventDefault(); shareEmail('${w.id}')">📧 Share via Email</a>
+                                <a href="#" onclick="event.preventDefault(); copyLink('${w.id}')">🔗 Copy Link</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1993,6 +1130,7 @@
     }
 
     function showHome() {
+        history.pushState('', document.title, window.location.pathname);
         document.getElementById('homeView').style.display = 'block';
         document.getElementById('hero').style.display = 'block';
         document.getElementById('detailView').classList.remove('active');
@@ -2061,8 +1199,85 @@
         document.getElementById('reviewsList').innerHTML = renderReviews(sorted);
     }
 
+    // Share functions
+    function getWizardUrl(id) {
+        return window.location.origin + window.location.pathname + '#wizard=' + id;
+    }
+
+    function getWizardShareText(id) {
+        const w = wizards.find(x => x.id === id);
+        return `Check out ${w.name}'s reviews on RateMyWizard! Rated ${w.quality.toFixed(1)}/5.0 - ${w.wouldTakeAgain}% would take again.`;
+    }
+
+    function toggleShare(menuId) {
+        document.querySelectorAll('.share-menu').forEach(m => {
+            if (m.id !== menuId) m.classList.remove('active');
+        });
+        document.getElementById(menuId).classList.toggle('active');
+    }
+
+    function shareTwitter(id) {
+        const text = encodeURIComponent(getWizardShareText(id));
+        const url = encodeURIComponent(getWizardUrl(id));
+        window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+        closeShareMenus();
+    }
+
+    function shareFacebook(id) {
+        const url = encodeURIComponent(getWizardUrl(id));
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+        closeShareMenus();
+    }
+
+    function shareReddit(id) {
+        const w = wizards.find(x => x.id === id);
+        const title = encodeURIComponent(`${w.name} - RateMyWizard (${w.quality.toFixed(1)}/5.0)`);
+        const url = encodeURIComponent(getWizardUrl(id));
+        window.open(`https://www.reddit.com/submit?url=${url}&title=${title}`, '_blank');
+        closeShareMenus();
+    }
+
+    function shareEmail(id) {
+        const w = wizards.find(x => x.id === id);
+        const subject = encodeURIComponent(`Check out ${w.name} on RateMyWizard!`);
+        const body = encodeURIComponent(getWizardShareText(id) + '\n\n' + getWizardUrl(id));
+        window.location.href = `mailto:?subject=${subject}&body=${body}`;
+        closeShareMenus();
+    }
+
+    function copyLink(id) {
+        navigator.clipboard.writeText(getWizardUrl(id)).then(() => {
+            const toast = document.getElementById('copyToast');
+            toast.style.display = 'block';
+            setTimeout(() => { toast.style.display = 'none'; }, 2000);
+        });
+        closeShareMenus();
+    }
+
+    function closeShareMenus() {
+        document.querySelectorAll('.share-menu').forEach(m => m.classList.remove('active'));
+    }
+
+    // Close share menus when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.share-dropdown')) closeShareMenus();
+    });
+
+    // Handle hash-based deep links
+    function handleHash() {
+        const hash = window.location.hash;
+        if (hash.startsWith('#wizard=')) {
+            const id = hash.replace('#wizard=', '');
+            showWizard(id);
+        }
+    }
+
+    window.addEventListener('hashchange', handleHash);
+
     // Init
     renderWizardCards();
+    handleHash();
     </script>
+    <div class="share-copied" id="copyToast">Link copied to clipboard!</div>
 </body>
 </html>
