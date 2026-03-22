@@ -1064,5 +1064,58 @@ const wizards = [
                 tags: ["Easy Grader", "Hilarious", "Hypnotic Lectures"], thumbsUp: 534, thumbsDown: 12
             }
         ]
+    },
+    {
+        id: "oz",
+        name: "The Wizard of Oz",
+        title: "The Great and Powerful Oz (Actually Just Some Guy)",
+        school: "Emerald City University",
+        department: "Department of Illusion, Showmanship & Confidence-Based Sorcery",
+        image: "https://upload.wikimedia.org/wikipedia/commons/1/13/Wizard_Oz_Humbug_%28cropped%29.jpg",
+        quality: 2.1,
+        difficulty: 1.8,
+        wouldTakeAgain: 32,
+        numRatings: 254,
+        hotness: false,
+        tags: ["Easy Grader", "Would Not Recommend", "Not a Real Wizard", "Great Showman", "Pay No Attention to the Man Behind the Curtain", "Hilarious"],
+        ratings: { awesome: 12, great: 10, good: 15, ok: 23, awful: 40 },
+        breakdown: { "Knowledge": 1.5, "Accessibility": 1.0, "Clarity": 2.5, "Helpfulness": 3.5, "Charisma": 4.5, "Punctuality": 3.0 },
+        reviews: [
+            {
+                quality: 1.0, difficulty: 1.0,
+                course: "WIZD 101: Introduction to Being a Wizard (No Magic Required)",
+                date: "Emerald City, Year of Oz 40", attendance: "Mandatory", forCredit: true, textbook: false, grade: "A", wouldTakeAgain: false,
+                text: "This man is NOT A WIZARD. He's a balloon pilot from KANSAS. I walked behind the curtain in the lecture hall and he was just pulling levers and speaking into a megaphone. The 'magical green glow' of the classroom? Green-tinted glasses he makes everyone wear on day one. I've been wearing fake magic glasses for THREE SEMESTERS. My entire degree is a lie. He gave everyone an A because, and I quote, 'a diploma is just a piece of paper that makes you feel smart.' SIR. I am $40,000 in debt to feel smart.",
+                tags: ["Not a Real Wizard", "Easy Grader", "Would Not Recommend"], thumbsUp: 892, thumbsDown: 5
+            },
+            {
+                quality: 3.0, difficulty: 2.0,
+                course: "CONF 300: Advanced Confidence & Fake It Till You Make It",
+                date: "Emerald City, Year of Oz 41", attendance: "Not Mandatory", forCredit: true, textbook: false, grade: "A-", wouldTakeAgain: true,
+                text: "OK so he's not a real wizard but hear me out - this class is ACTUALLY USEFUL. The Wizard taught us that most power is just confidence plus good lighting plus a smoke machine. He gave a Scarecrow a diploma and the Scarecrow immediately started doing calculus. He gave a Lion a medal and the Lion fought a Kalidah. The magic was inside them the whole time, sure, but the Wizard is the one who convinced them of that. He's not a sorcerer, he's a THERAPIST. With PYROTECHNICS. Honestly more useful than half the real wizards on this site.",
+                tags: ["Great Showman", "Hilarious", "Inspirational"], thumbsUp: 567, thumbsDown: 18
+            },
+            {
+                quality: 2.0, difficulty: 2.0,
+                course: "SMOK 200: Smoke, Mirrors & Large Floating Head Projection",
+                date: "Emerald City, Year of Oz 39", attendance: "Mandatory", forCredit: true, textbook: false, grade: "B+", wouldTakeAgain: false,
+                text: "The entire course is special effects. Not magical special effects. THEATRICAL special effects. Pulleys. Levers. Green dye. Fireworks. Megaphones. He taught us to project a giant floating head using nothing but a lantern and some fabric. When Gandalf visited as a guest lecturer and did ACTUAL magic, the Wizard just stood there sweating and said 'yes, that's very similar to what I do.' It is NOT similar. Gandalf conjured fire from nothing. You have a SMOKE MACHINE, Oscar. Still, the stagecraft knowledge is genuinely impressive.",
+                tags: ["Not a Real Wizard", "Hilarious", "Great Showman"], thumbsUp: 456, thumbsDown: 14
+            },
+            {
+                quality: 1.5, difficulty: 1.0,
+                course: "BALO 100: Hot Air Balloon Safety & Emergency Kansas Evacuation",
+                date: "Emerald City, Year of Oz 42", attendance: "Not Mandatory", forCredit: false, textbook: false, grade: "A", wouldTakeAgain: false,
+                text: "The Wizard's backup plan for every crisis is 'get in the balloon and leave.' That's it. That's the entire crisis management curriculum. When things went wrong during the final, he literally got in his balloon and FLOATED AWAY while we were still taking the exam. He shouted 'you all pass!' from 500 feet in the air. We haven't seen him since. The department sent a search party but all they found was a pair of green-tinted glasses and a note that said 'Pay no attention to the man who has left.' The Emerald City has no chancellor. I still got my A.",
+                tags: ["Easy Grader", "Would Not Recommend", "Hilarious"], thumbsUp: 734, thumbsDown: 3
+            },
+            {
+                quality: 3.5, difficulty: 2.5,
+                course: "HRTS 250: Giving People What They Already Have (A Seminar)",
+                date: "Emerald City, Year of Oz 40", attendance: "Mandatory", forCredit: true, textbook: false, grade: "A", wouldTakeAgain: true,
+                text: "This is secretly the most profound class at ECU. The Wizard spent the whole semester teaching us that people don't actually need magic - they need someone to tell them they're enough. He gave a Tin Man a ticking clock and called it a heart. The Tin Man CRIED. It's a CLOCK. But the Tin Man felt loved and that's what mattered. The final exam was making someone believe in themselves without using any magic. I told my roommate she was a good cook. She cried. I got an A. This fraud accidentally created the best psychology course on campus.",
+                tags: ["Inspirational", "Caring", "Great Showman"], thumbsUp: 623, thumbsDown: 8
+            }
+        ]
     }
 ];
