@@ -424,7 +424,7 @@ const wizards = [
     },
     {
         id: "circe",
-        name: "Circe",
+        name: "Circe (Κίρκη)",
         title: "Goddess of Sorcery, Daughter of Helios",
         school: "Aeaea Institute of Divine Magic",
         department: "Department of Transmutation, Potions & Hospitality",
@@ -558,7 +558,7 @@ const wizards = [
     },
     {
         id: "teiresias",
-        name: "Teiresias",
+        name: "Teiresias (Τειρεσίας)",
         title: "Blind Prophet of Thebes",
         school: "Theban Academy of Divination",
         department: "Department of Prophecy, Fate & Uncomfortable Truths",
@@ -625,7 +625,7 @@ const wizards = [
     },
     {
         id: "pythia",
-        name: "The Pythia",
+        name: "The Pythia (Πυθία)",
         title: "Oracle of Delphi, Voice of Apollo",
         school: "Temple of Apollo at Delphi",
         department: "Department of Divine Communication & Cryptic Utterances",
@@ -692,7 +692,7 @@ const wizards = [
     },
     {
         id: "medusa",
-        name: "Medusa",
+        name: "Medusa (Μέδουσα)",
         title: "Gorgon, Former Priestess of Athena",
         school: "Aeaea Institute of Divine Magic",
         department: "Department of Petrification Studies & Ophidian Arts",
@@ -1115,6 +1115,385 @@ const wizards = [
                 date: "Emerald City, Year of Oz 40", attendance: "Mandatory", forCredit: true, textbook: false, grade: "A", wouldTakeAgain: true,
                 text: "This is secretly the most profound class at ECU. The Wizard spent the whole semester teaching us that people don't actually need magic - they need someone to tell them they're enough. He gave a Tin Man a ticking clock and called it a heart. The Tin Man CRIED. It's a CLOCK. But the Tin Man felt loved and that's what mattered. The final exam was making someone believe in themselves without using any magic. I told my roommate she was a good cook. She cried. I got an A. This fraud accidentally created the best psychology course on campus.",
                 tags: ["Inspirational", "Caring", "Great Showman"], thumbsUp: 623, thumbsDown: 8
+            }
+        ]
+    },
+    {
+        id: "orko",
+        name: "Orko",
+        title: "Court Jester & Wizard of Eternia (Formerly of Trolla)",
+        school: "Royal Palace of Eternos Academy",
+        department: "Department of Accidental Magic & Comic Relief Studies",
+        image: "https://upload.wikimedia.org/wikipedia/commons/0/0a/He-Man_and_the_Masters_of_the_Universe.jpg",
+        quality: 2.5,
+        difficulty: 1.2,
+        wouldTakeAgain: 55,
+        numRatings: 143,
+        hotness: false,
+        tags: ["Easy Grader", "Hilarious", "Spells Backfire", "No Face", "Caring", "Tries His Best"],
+        ratings: { awesome: 18, great: 15, good: 22, ok: 20, awful: 25 },
+        breakdown: { "Knowledge": 2.5, "Accessibility": 5.0, "Clarity": 2.0, "Helpfulness": 4.0, "Charisma": 4.5, "Punctuality": 3.5 },
+        reviews: [
+            {
+                quality: 2.0, difficulty: 1.0,
+                course: "FLOT 101: Levitation & Why Orko Can Do It But Can't Explain How",
+                date: "Eternian Calendar, Cycle 47", attendance: "Not Mandatory", forCredit: true, textbook: false, grade: "A", wouldTakeAgain: true,
+                text: "Orko floats everywhere. All the time. He cannot walk. He cannot explain why he floats. He tried to teach us levitation and accidentally turned the entire front row into flowers. Then tried to fix it and turned them into chickens. Then tried AGAIN and they became flower-chickens. A hybrid that shouldn't exist. They were eventually restored by Man-At-Arms using SCIENCE, not magic. Orko cried. I got an A for attendance. The flower-chickens are now campus mascots. Nobody has the heart to tell Orko they're a mistake.",
+                tags: ["Spells Backfire", "Easy Grader", "Hilarious"], thumbsUp: 345, thumbsDown: 8
+            },
+            {
+                quality: 3.0, difficulty: 1.0,
+                course: "TROL 300: Trollan Magic & Why It Doesn't Work on Eternia",
+                date: "Eternian Calendar, Cycle 48", attendance: "Not Mandatory", forCredit: true, textbook: false, grade: "A-", wouldTakeAgain: true,
+                text: "Plot twist: Orko is actually a GREAT wizard on his home planet Trolla. The magic just works differently on Eternia and everything comes out wrong. He showed us recordings of himself on Trolla being this incredible, respected sorcerer. Then he tried to recreate a spell and accidentally set the curtains on fire. The look of defeat on his - well, I assume defeat. I CAN'T SEE HIS FACE. Nobody has ever seen his face. He's just two eyes under a hat. I've been in his class for two years and I don't know what species he is.",
+                tags: ["No Face", "Hilarious", "Tries His Best"], thumbsUp: 478, thumbsDown: 5
+            },
+            {
+                quality: 3.0, difficulty: 1.5,
+                course: "HERO 200: Supporting Your Local Barbarian Hero (A Workshop)",
+                date: "Eternian Calendar, Cycle 49", attendance: "Not Mandatory", forCredit: false, textbook: false, grade: "A", wouldTakeAgain: true,
+                text: "Orko's real talent isn't magic - it's morale. Every time He-Man is fighting Skeletor and things look bad, Orko shows up and accidentally does something so stupid it distracts everyone long enough for He-Man to win. He taught us that sometimes the best support is being so incompetent that the enemy can't focus. The final was distracting a simulated villain. I tripped over my own robe and knocked over a potion that exploded. Orko gave me an A and said 'EXACTLY like that.' Most validating failure of my life.",
+                tags: ["Caring", "Hilarious", "Tries His Best"], thumbsUp: 412, thumbsDown: 6
+            }
+        ]
+    },
+    {
+        id: "obiwan",
+        name: "Obi-Wan Kenobi",
+        title: "Jedi Master, General of the Clone Wars",
+        school: "Jedi Temple Academy, Coruscant",
+        department: "Department of Lightsaber Studies, Force Sensitivity & High Ground Tactics",
+        image: "https://upload.wikimedia.org/wikipedia/commons/c/cb/C2E2_2013_-_Obi-Wan_Kenobi_%288701575679%29.jpg",
+        quality: 4.6,
+        difficulty: 4.4,
+        wouldTakeAgain: 85,
+        numRatings: 312,
+        hotness: true,
+        tags: ["Respected", "Inspirational", "Tough Grader", "Sarcastic", "Hello There", "Has the High Ground"],
+        ratings: { awesome: 65, great: 18, good: 8, ok: 5, awful: 4 },
+        breakdown: { "Knowledge": 4.8, "Accessibility": 4.0, "Clarity": 4.5, "Helpfulness": 4.5, "Charisma": 5.0, "Punctuality": 4.0 },
+        reviews: [
+            {
+                quality: 5.0, difficulty: 4.0,
+                course: "SABR 401: Advanced Lightsaber Combat (Form III: Soresu)",
+                date: "19 BBY", attendance: "Mandatory", forCredit: true, textbook: false, grade: "A", wouldTakeAgain: true,
+                text: "Master Kenobi is the greatest defensive fighter in the Order and he teaches with this dry, devastating wit that makes you want to both learn and cry. He told one student his Form IV was 'very aggressive. Aggressively wrong.' The man roasts people while deflecting blaster bolts. The final was a sparring exam and he beat all 30 of us simultaneously while making small talk about the weather on Mandalore. He starts every class by walking in and saying 'Hello there.' Every. Single. Time. It never gets old.",
+                tags: ["Respected", "Sarcastic", "Hello There"], thumbsUp: 712, thumbsDown: 5
+            },
+            {
+                quality: 5.0, difficulty: 5.0,
+                course: "MENT 500: Master-Padawan Relationships & Why They Go Wrong",
+                date: "18 BBY", attendance: "Mandatory", forCredit: true, textbook: false, grade: "A-", wouldTakeAgain: true,
+                text: "This class is Obi-Wan processing his trauma in real time and calling it a curriculum. Week 1: 'How to identify a promising student.' Week 5: 'What to do when your student starts listening to a suspicious politician.' Week 10: 'When your apprentice murders a room full of children.' He got very quiet during that lecture. The whole class got very quiet. He then said 'Anyway, let's discuss healthy boundaries.' Best mentor I've ever had. I will NOT turn to the dark side for this man.",
+                tags: ["Inspirational", "Caring", "Tough Grader"], thumbsUp: 892, thumbsDown: 3
+            },
+            {
+                quality: 4.5, difficulty: 4.5,
+                course: "TACT 300: The Importance of High Ground (Theoretical & Applied)",
+                date: "19 BBY", attendance: "Mandatory", forCredit: true, textbook: false, grade: "B+", wouldTakeAgain: true,
+                text: "Obi-Wan is OBSESSED with high ground. Every tactical scenario, every field exercise, every LUNCH BREAK - he finds the highest point and stands there looking noble. The entire midterm was just 'explain why having the high ground is advantageous.' I wrote two pages. The student who wrote 'because Master Kenobi said so' got a higher grade. He has tenure and he knows it. Also he keeps a pet lizard that he rides like a horse. Nobody questions the lizard. We all just accept the lizard.",
+                tags: ["Has the High Ground", "Sarcastic", "Hilarious"], thumbsUp: 567, thumbsDown: 9
+            },
+            {
+                quality: 4.0, difficulty: 4.0,
+                course: "NEGN 250: Aggressive Negotiations & Civilized Diplomacy",
+                date: "22 BBY", attendance: "Not Mandatory", forCredit: true, textbook: false, grade: "A-", wouldTakeAgain: true,
+                text: "Obi-Wan defines 'aggressive negotiations' as 'negotiations with a lightsaber.' He spent the first three weeks teaching actual diplomacy - active listening, cultural sensitivity, finding common ground. Then week four he walked in and said 'sometimes you just have to cut someone's arm off in a bar' and showed us his Form III technique. The tonal whiplash was severe. He is simultaneously the most civilized and most lethal professor at this academy. He drinks tea during combat drills. I want to BE him.",
+                tags: ["Respected", "Amazing Lectures", "Sarcastic"], thumbsUp: 489, thumbsDown: 7
+            }
+        ]
+    },
+    {
+        id: "graeae",
+        name: "The Stygian Witches (Γραῖαι)",
+        title: "The Three Grey Sisters, Daughters of Phorcys & Ceto",
+        school: "Aeaea Institute of Divine Magic",
+        department: "Department of Shared Resources, Prophecy & Eye Management",
+        image: "https://upload.wikimedia.org/wikipedia/commons/9/91/Edward_Burne-Jones--Perseus_and_the_Graiae.jpg",
+        quality: 2.6,
+        difficulty: 4.2,
+        wouldTakeAgain: 30,
+        numRatings: 98,
+        hotness: false,
+        tags: ["Confusing Sometimes", "Three Professors One Eye", "Tough Grader", "Bring Your Own Eyes", "Lecture Heavy", "They Finish Each Other's Sentences"],
+        ratings: { awesome: 15, great: 12, good: 18, ok: 22, awful: 33 },
+        breakdown: { "Knowledge": 4.0, "Accessibility": 1.0, "Clarity": 1.5, "Helpfulness": 2.5, "Charisma": 3.0, "Punctuality": 2.0 },
+        reviews: [
+            {
+                quality: 2.0, difficulty: 4.5,
+                course: "SHAR 301: Resource Management & Optimal Eye-Sharing Strategies",
+                date: "Before Time Was Counted", attendance: "Mandatory", forCredit: true, textbook: false, grade: "C+", wouldTakeAgain: false,
+                text: "There are THREE professors teaching this class and they share ONE EYE and ONE TOOTH between them. They pass the eye back and forth to read our essays and it takes FOREVER. Deino was grading my paper, then Enyo grabbed the eye to check a citation, then Pemphredo snatched it to look at the clock. My paper was graded by three different people who each saw different paragraphs. I got three different grades averaged into a C+. The scheduling alone is a human rights violation. Also they can only eat one at a time because of the tooth situation.",
+                tags: ["Three Professors One Eye", "Tough Grader", "Confusing Sometimes"], thumbsUp: 389, thumbsDown: 12
+            },
+            {
+                quality: 3.0, difficulty: 4.0,
+                course: "PRPH 200: Prophecy When You Can Barely See",
+                date: "When the Stars Were Young", attendance: "Mandatory", forCredit: true, textbook: false, grade: "B", wouldTakeAgain: false,
+                text: "The Graeae know EVERYTHING. They know the location of every monster, the weakness of every god, and the secret to defeating Medusa. The problem is getting them to TELL you. A hero named Perseus showed up during office hours and literally stole their eye and held it hostage until they gave him the information he needed. The Graeae filed a formal complaint with the dean. Perseus got the information AND an A in a class he wasn't enrolled in. The security in this department is atrocious.",
+                tags: ["Lecture Heavy", "Respected", "Confusing Sometimes"], thumbsUp: 456, thumbsDown: 8
+            },
+            {
+                quality: 3.0, difficulty: 4.0,
+                course: "TEAM 100: Co-Teaching & Why Three Heads Are Not Better Than One",
+                date: "An Age Ago", attendance: "Mandatory", forCredit: true, textbook: false, grade: "B-", wouldTakeAgain: false,
+                text: "They finish each other's sentences. Deino starts a sentence, Enyo continues it, and Pemphredo ends it. But they DON'T AGREE on the ending. So every lecture point has three conclusions. 'The nature of prophecy is...' '...fundamentally unknowable...' '...actually quite simple...' '...a fish.' They argued about the fish comment for twenty minutes. The one with the eye at any given moment is the one teaching, and the other two just heckle from the sides. It's like a really angry podcast with tenure.",
+                tags: ["Three Professors One Eye", "Hilarious", "They Finish Each Other's Sentences"], thumbsUp: 534, thumbsDown: 6
+            }
+        ]
+    },
+    {
+        id: "yennefer",
+        name: "Yennefer of Vengerberg",
+        title: "Sorceress, Former Adviser to King Demavend",
+        school: "Aretuza Academy of Sorceresses",
+        department: "Department of Chaos Magic, Court Politics & Looking Incredible",
+        image: "https://upload.wikimedia.org/wikipedia/commons/0/03/Yennefer_of_Vengerberg_%28by_KATRIONA%29.jpg",
+        quality: 4.3,
+        difficulty: 4.7,
+        wouldTakeAgain: 72,
+        numRatings: 198,
+        hotness: true,
+        tags: ["Tough Grader", "Respected", "Intimidating", "Amazing Lectures", "Will Destroy You (Academically)", "Smells Like Lilac and Gooseberries"],
+        ratings: { awesome: 52, great: 18, good: 12, ok: 8, awful: 10 },
+        breakdown: { "Knowledge": 5.0, "Accessibility": 2.5, "Clarity": 4.0, "Helpfulness": 3.0, "Charisma": 5.0, "Punctuality": 4.5 },
+        reviews: [
+            {
+                quality: 5.0, difficulty: 5.0,
+                course: "CHAO 501: Chaos Magic & Why It Will Kill You If You're Sloppy",
+                date: "1263, Continental Calendar", attendance: "Mandatory", forCredit: true, textbook: true, grade: "B+", wouldTakeAgain: true,
+                text: "Yennefer is the most terrifyingly competent sorceress I have ever met. She opened the first lecture by creating a portal, pulling a live monster through it, killing it with a fireball, and then saying 'that's what happens when you mispronounce the incantation on page 47.' Nobody mispronounced anything for the rest of the semester. She grades like she's judging your worth as a human being. I got a B+ and she said 'adequate.' I've never been more motivated by a single word. Also the classroom always smells amazing. Like lilac and gooseberries.",
+                tags: ["Tough Grader", "Intimidating", "Amazing Lectures"], thumbsUp: 567, thumbsDown: 8
+            },
+            {
+                quality: 4.5, difficulty: 4.5,
+                course: "BEAU 300: Glamour, Illusion & The Politics of Appearance",
+                date: "1260, Continental Calendar", attendance: "Not Mandatory", forCredit: true, textbook: false, grade: "A-", wouldTakeAgain: true,
+                text: "Yennefer taught us that every sorceress at Aretuza was magically enhanced to be beautiful upon graduation. She then discussed the ethics of this for three hours with a fury that shook the windows. This class is part magic instruction, part feminist theory, part group therapy session. She revealed that she used to have a spinal deformity and chose her own appearance with magic. A student said 'you chose well' and Yennefer stared at him until he physically left the room. Queen behavior. Ten out of ten.",
+                tags: ["Respected", "Inspirational", "Intimidating"], thumbsUp: 678, thumbsDown: 4
+            },
+            {
+                quality: 4.0, difficulty: 5.0,
+                course: "WISH 400: Djinn Negotiation & Why You Should Never Make a Wish",
+                date: "1262, Continental Calendar", attendance: "Mandatory", forCredit: true, textbook: false, grade: "B", wouldTakeAgain: true,
+                text: "Yennefer once captured a Djinn and made a wish so powerful it bound her fate to a witcher's for eternity. She uses this as the primary case study for 'why you should think before you wish.' The entire course is basically 'learn from my mistakes' but taught with the energy of someone who would make the same mistakes again. She brought the witcher in as a guest lecturer. He grunted for 45 minutes. She translated: 'Geralt says don't make wishes.' The emotional tension in that room could have powered a small city.",
+                tags: ["Tough Grader", "Hilarious", "Amazing Lectures"], thumbsUp: 534, thumbsDown: 11
+            }
+        ]
+    },
+    {
+        id: "vivi",
+        name: "Vivi Ornitier",
+        title: "Black Mage, Seeker of Purpose",
+        school: "Alexandria Royal Academy of Magic",
+        department: "Department of Black Magic, Existentialism & Pointy Hats",
+        image: "https://upload.wikimedia.org/wikipedia/commons/1/1a/Otakuthon_2014-_Vivi_Ornitier_%2814853289848%29.jpg",
+        quality: 4.7,
+        difficulty: 2.8,
+        wouldTakeAgain: 94,
+        numRatings: 186,
+        hotness: false,
+        tags: ["Caring", "Inspirational", "Easy Grader", "Will Make You Cry", "Glowing Eyes", "Best Boy"],
+        ratings: { awesome: 72, great: 15, good: 8, ok: 3, awful: 2 },
+        breakdown: { "Knowledge": 4.0, "Accessibility": 5.0, "Clarity": 3.5, "Helpfulness": 5.0, "Charisma": 4.5, "Punctuality": 4.5 },
+        reviews: [
+            {
+                quality: 5.0, difficulty: 3.0,
+                course: "FIRE 201: Introduction to Fire, Ice & Thunder Magic",
+                date: "Alexandria, Month of Leo", attendance: "Not Mandatory", forCredit: true, textbook: false, grade: "A", wouldTakeAgain: true,
+                text: "Vivi is a tiny black mage with glowing yellow eyes under a giant hat and he is the PUREST SOUL in the entire academy. He teaches fire magic by accidentally setting his own hat on fire and then apologizing to the hat. He apologized to a HAT. When a student struggled with a thunder spell he sat with them for three extra hours after class until they got it. He then said 'I knew you could do it' with such sincerity that the student cried. I cried. Everyone cries in Vivi's class. It's a beautiful, fire-hazard-filled experience.",
+                tags: ["Caring", "Will Make You Cry", "Best Boy"], thumbsUp: 823, thumbsDown: 1
+            },
+            {
+                quality: 5.0, difficulty: 3.0,
+                course: "EXST 400: What Does It Mean to Be Alive? (A Black Mage's Perspective)",
+                date: "Alexandria, Month of Virgo", attendance: "Not Mandatory", forCredit: false, textbook: false, grade: "A", wouldTakeAgain: true,
+                text: "Vivi found out he was artificially created as a weapon of war and instead of having a breakdown he turned it into the most moving philosophy course I've ever taken. He asked 'does it matter how you were made, or does it matter what you choose to do?' and the entire lecture hall went silent for a full minute. A guy in the back who hadn't done any readings all semester started JOURNALING. Vivi has accidentally become the spiritual center of this university. He's nine. He might be nine. Nobody knows how old he is. Protect him at all costs.",
+                tags: ["Inspirational", "Will Make You Cry", "Amazing Lectures"], thumbsUp: 956, thumbsDown: 0
+            },
+            {
+                quality: 4.5, difficulty: 2.5,
+                course: "TRIP 150: Stumbling, Falling & Getting Back Up (Literally & Metaphorically)",
+                date: "Alexandria, Month of Libra", attendance: "Not Mandatory", forCredit: false, textbook: false, grade: "A", wouldTakeAgain: true,
+                text: "Vivi trips over things constantly. His hat is too big. His coat is too long. He falls off the lecture podium at least once per class. But he ALWAYS gets back up and continues the lesson like nothing happened. He turned this into a whole seminar on resilience. The midterm was literally falling down and getting back up. I got an A. A student who fell and stayed down got a B+ and a concerned follow-up email asking if they were OK. Vivi is too good for this world and this website doesn't have enough stars.",
+                tags: ["Caring", "Best Boy", "Hilarious"], thumbsUp: 734, thumbsDown: 2
+            }
+        ]
+    },
+    {
+        id: "jesus",
+        name: "Jesus of Nazareth",
+        title: "Carpenter, Prophet, Miracle Worker & Son of God",
+        school: "Galilee Open University (No Fixed Campus)",
+        department: "Department of Parables, Miracles & Radical Compassion",
+        image: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Spas_vsederzhitel_sinay.jpg",
+        quality: 5.0,
+        difficulty: 4.8,
+        wouldTakeAgain: 99,
+        numRatings: 2000000000,
+        hotness: false,
+        tags: ["Inspirational", "Tough Grader", "Will Change Your Life", "Feeds the Whole Class", "Office Hours on a Mountain", "Walks on Water"],
+        ratings: { awesome: 85, great: 8, good: 3, ok: 2, awful: 2 },
+        breakdown: { "Knowledge": 5.0, "Accessibility": 5.0, "Clarity": 3.0, "Helpfulness": 5.0, "Charisma": 5.0, "Punctuality": 3.0 },
+        reviews: [
+            {
+                quality: 5.0, difficulty: 5.0,
+                course: "PARA 301: Advanced Parables & Why Nobody Understands Them",
+                date: "Circa 30 AD", attendance: "Not Mandatory", forCredit: false, textbook: false, grade: "A", wouldTakeAgain: true,
+                text: "Jesus teaches entirely in parables and NOBODY understands them the first time. Peter asked a straightforward question about tax policy and Jesus told a story about a mustard seed. The disciples asked for clarification and he told ANOTHER parable about the first parable. It's parables all the way down. I've been thinking about the one with the vineyard workers for three years. I think I almost understand it. My friend says it means something completely different. We're both apparently correct? The grading rubric is 'love thy neighbor' which is vague but honestly hard to argue with.",
+                tags: ["Inspirational", "Confusing Sometimes", "Will Change Your Life"], thumbsUp: 1200, thumbsDown: 30
+            },
+            {
+                quality: 5.0, difficulty: 5.0,
+                course: "MRCL 500: Water Walking, Wine Making & Applied Miracles",
+                date: "Circa 31 AD", attendance: "Mandatory", forCredit: true, textbook: false, grade: "B+", wouldTakeAgain: true,
+                text: "For the midterm demonstration Jesus walked on water. On WATER. Lake Gennesaret. Several students tried to replicate it and sank immediately. Peter almost made it for about three steps and then panicked. Jesus pulled him out and said 'O ye of little faith.' Which is both a rescue and a roast. He then turned water into wine at the department mixer and it was the BEST wine anyone had ever tasted. The catering staff quit because they said they couldn't compete. He feeds 5,000 students with one packed lunch. The dining hall budget is zero.",
+                tags: ["Amazing Lectures", "Feeds the Whole Class", "Walks on Water"], thumbsUp: 1500, thumbsDown: 12
+            },
+            {
+                quality: 5.0, difficulty: 4.5,
+                course: "LOVE 100: Love Your Enemies (Yes, Even That One)",
+                date: "Circa 32 AD", attendance: "Not Mandatory", forCredit: false, textbook: false, grade: "A", wouldTakeAgain: true,
+                text: "This class RUINED me. I came in ready to fight everyone and left wanting to forgive my worst enemy. Jesus spent the first lecture saying we should love people who hate us. I raised my hand and said 'even the Romans?' and he said 'ESPECIALLY the Romans.' A Roman soldier was auditing the class and looked very confused. By week 6 they were sharing lunch. The final was washing someone's feet. I washed my rival's feet and we're friends now. I don't understand how this man does what he does but I have never left a class feeling more human.",
+                tags: ["Will Change Your Life", "Inspirational", "Caring"], thumbsUp: 2000, thumbsDown: 5
+            },
+            {
+                quality: 5.0, difficulty: 5.0,
+                course: "RSRR 600: Coming Back (An Independent Study)",
+                date: "Circa 33 AD", attendance: "Mandatory", forCredit: true, textbook: false, grade: "A+", wouldTakeAgain: true,
+                text: "Professor Jesus was executed by the administration on a Friday. Class was cancelled. We were devastated. Then he showed up to the Sunday lecture ALIVE. Nobody processed this correctly. Thomas refused to believe it was him and demanded proof. Jesus let Thomas poke his wounds and said 'blessed are those who believe without poking.' The man got MURDERED and turned it into a TEACHING MOMENT about faith. He then ascended into heaven during the closing remarks. No professor has EVER had a more dramatic exit. Still waiting on final grades.",
+                tags: ["Inspirational", "Will Change Your Life", "Amazing Lectures"], thumbsUp: 5000, thumbsDown: 3
+            }
+        ]
+    },
+    {
+        id: "harry",
+        name: "Harry Potter",
+        title: "The Boy Who Lived, Head of Auror Department",
+        school: "Hogwarts School of Witchcraft & Wizardry",
+        department: "Department of Defense Against the Dark Arts (Guest Lecturer)",
+        image: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Harry_Potter_fans_imitates_Harry%2C_Lumos_Maxima.jpg",
+        quality: 3.8,
+        difficulty: 3.5,
+        wouldTakeAgain: 78,
+        numRatings: 287,
+        hotness: true,
+        tags: ["Inspirational", "Caring", "Gives Good Feedback", "Famous", "Scar is Distracting", "Talks About Voldemort A Lot"],
+        ratings: { awesome: 45, great: 22, good: 18, ok: 10, awful: 5 },
+        breakdown: { "Knowledge": 3.8, "Accessibility": 4.5, "Clarity": 3.5, "Helpfulness": 4.5, "Charisma": 4.0, "Punctuality": 3.0 },
+        reviews: [
+            {
+                quality: 4.0, difficulty: 3.5,
+                course: "DADA 501: Defense Against the Dark Arts (The Version That Actually Sticks)",
+                date: "September 2017", attendance: "Mandatory", forCredit: true, textbook: true, grade: "A-", wouldTakeAgain: true,
+                text: "After seven different DADA professors (one of whom was literally Voldemort's face on the back of another guy's head), Hogwarts finally got Harry Potter as a guest lecturer. He's GOOD but he has a habit of saying 'well, when I fought Voldemort...' every five minutes. Sir, we know. Everyone knows. There's a biography. There are seven biographies. He taught us Expelliarmus for three straight weeks because it's 'the only spell you really need.' He beat the most powerful dark wizard ever using a disarming charm so honestly? Fair point.",
+                tags: ["Famous", "Inspirational", "Talks About Voldemort A Lot"], thumbsUp: 567, thumbsDown: 12
+            },
+            {
+                quality: 4.0, difficulty: 4.0,
+                course: "PATR 400: Patronus Conjuring & Finding Your Happy Memory",
+                date: "November 2017", attendance: "Not Mandatory", forCredit: true, textbook: false, grade: "A", wouldTakeAgain: true,
+                text: "Harry taught Patronus charms at age 13 when most adults can't manage it, so he's genuinely the best person for this class. The problem is he's a CELEBRITY and half the class just stares at his scar instead of practicing. He brought in a boggart for a practical and it turned into Voldemort for every single student because Harry talks about Voldemort SO MUCH that now WE'RE all scared of him too. My boggart used to be spiders. Now it's a bald man with no nose. Thanks, Professor Potter.",
+                tags: ["Caring", "Famous", "Scar is Distracting"], thumbsUp: 634, thumbsDown: 8
+            },
+            {
+                quality: 3.5, difficulty: 3.0,
+                course: "SURV 200: Surviving Hogwarts (A Practical Guide)",
+                date: "February 2018", attendance: "Not Mandatory", forCredit: false, textbook: false, grade: "A-", wouldTakeAgain: true,
+                text: "Harry's syllabus for this class is INSANE: Week 1 - How to survive a three-headed dog. Week 3 - What to do if the school is full of basilisks. Week 5 - Dementor avoidance. Week 8 - Your teacher might be a Death Eater (how to check). Week 11 - The castle is under siege: emergency protocols. This is supposed to be a SCHOOL. Why does an 11-year-old need to fight a troll?? Harry says 'it builds character.' Sir, it builds TRAUMA. Hermione Granger was in the audience and kept correcting his lecture notes. He seemed used to it.",
+                tags: ["Hilarious", "Caring", "Gives Good Feedback"], thumbsUp: 489, thumbsDown: 14
+            }
+        ]
+    },
+    {
+        id: "dumbledore",
+        name: "Albus Dumbledore",
+        title: "Headmaster of Hogwarts, Supreme Mugwump, Chief Warlock",
+        school: "Hogwarts School of Witchcraft & Wizardry",
+        department: "Department of Everything (He's the Headmaster)",
+        image: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Lucca_comics_%26_games_2013_%28cosplay_of_Dumbledore%29.jpg",
+        quality: 4.5,
+        difficulty: 4.5,
+        wouldTakeAgain: 88,
+        numRatings: 345,
+        hotness: false,
+        tags: ["Inspirational", "Respected", "Confusing Sometimes", "Cryptic", "Lemon Drop Enthusiast", "Knows Everything But Won't Tell You"],
+        ratings: { awesome: 62, great: 18, good: 10, ok: 5, awful: 5 },
+        breakdown: { "Knowledge": 5.0, "Accessibility": 2.0, "Clarity": 2.5, "Helpfulness": 4.0, "Charisma": 5.0, "Punctuality": 3.5 },
+        reviews: [
+            {
+                quality: 5.0, difficulty: 5.0,
+                course: "ALCH 601: Advanced Alchemy & The Twelve Uses of Dragon's Blood",
+                date: "September 1985", attendance: "Mandatory", forCredit: true, textbook: true, grade: "A-", wouldTakeAgain: true,
+                text: "Dumbledore discovered the twelve uses of dragon's blood and REFUSES to tell us what they all are. He says 'the journey of discovery is the real lesson.' NO SIR, the twelve uses of dragon's blood is the lesson, that's literally what the course catalog says. He spent three lectures on uses 1 through 10, then said 'the last two are left as an exercise for the student.' EXERCISES?? He made the Philosopher's Stone with Nicolas Flamel and his idea of sharing knowledge is a RIDDLE. I love this man but I want to shake him.",
+                tags: ["Cryptic", "Respected", "Confusing Sometimes"], thumbsUp: 678, thumbsDown: 8
+            },
+            {
+                quality: 4.5, difficulty: 4.0,
+                course: "WSDM 100: Wisdom, Socks & The Power of Love",
+                date: "December 1991", attendance: "Not Mandatory", forCredit: false, textbook: false, grade: "A", wouldTakeAgain: true,
+                text: "The first thing Dumbledore said in lecture was 'Before we begin, I would like to say a few words: Nitwit! Blubber! Oddment! Tweak!' and then food appeared. No explanation. No context. The man runs the most prestigious magical school in Britain and his opening address is FOUR NONSENSE WORDS. A student asked what he sees in the Mirror of Erised and he said 'myself holding a pair of thick, woolen socks.' He's either the wisest being alive or completely insane. The answer, terrifyingly, might be both. He offered me a lemon drop during office hours. I accepted. It was life-changing. Don't ask me to explain.",
+                tags: ["Lemon Drop Enthusiast", "Inspirational", "Hilarious"], thumbsUp: 789, thumbsDown: 5
+            },
+            {
+                quality: 4.0, difficulty: 5.0,
+                course: "PLAN 600: Long-Term Strategic Planning (50+ Years)",
+                date: "June 1997", attendance: "Mandatory", forCredit: true, textbook: false, grade: "B+", wouldTakeAgain: false,
+                text: "Dumbledore has been planning a single chess game against dark forces for FIFTY YEARS. He has contingencies for his contingencies. He used an 11-year-old orphan as a key piece in this plan. When I said that seemed ethically questionable he said 'sometimes we must make difficult choices for the greater good' and his eye did that twinkle thing. THE TWINKLE. He weaponizes that twinkle. You can't argue with the twinkle. I wrote my thesis on 'Is Dumbledore a benevolent genius or a manipulative mastermind?' He graded it B+ and wrote 'Why not both?' in the margins. I have no rebuttal.",
+                tags: ["Knows Everything But Won't Tell You", "Tough Grader", "Cryptic"], thumbsUp: 845, thumbsDown: 15
+            },
+            {
+                quality: 5.0, difficulty: 4.5,
+                course: "SPCH 100: Start-of-Term Banquet Speeches & Emotional Manipulation",
+                date: "September 1996", attendance: "Mandatory", forCredit: false, textbook: false, grade: "A", wouldTakeAgain: true,
+                text: "Every year Dumbledore gives a start-of-term speech that's half nonsense, half wisdom, and 100% emotionally devastating. He once said 'Happiness can be found, even in the darkest of times, if one only remembers to turn on the light.' I'm 35 years old. I have a mortgage. And that sentence made me cry in front of 400 children. He then waved his hand and an entire feast appeared. The man creates emotional vulnerability and then feeds you. It's Pavlovian. I hear his voice and I start crying AND getting hungry.",
+                tags: ["Inspirational", "Amazing Lectures", "Will Change Your Life"], thumbsUp: 934, thumbsDown: 2
+            }
+        ]
+    },
+    {
+        id: "jafar",
+        name: "Jafar",
+        title: "Royal Vizier of Agrabah (Formerly), Sorcerer Supreme",
+        school: "Agrabah Royal Institute of Sorcery",
+        department: "Department of Hypnosis, Snake Staffs & Hostile Takeovers",
+        image: "https://upload.wikimedia.org/wikipedia/commons/5/50/SDCC_15_-_Jafar_%2819671854352%29.jpg",
+        quality: 1.9,
+        difficulty: 4.6,
+        wouldTakeAgain: 12,
+        numRatings: 156,
+        hotness: false,
+        tags: ["Tough Grader", "Would Not Recommend", "Intimidating", "Talks to a Parrot", "Trust Issues", "Turned Into a Snake Once"],
+        ratings: { awesome: 5, great: 8, good: 10, ok: 18, awful: 59 },
+        breakdown: { "Knowledge": 4.5, "Accessibility": 0.5, "Clarity": 3.5, "Helpfulness": 0.5, "Charisma": 3.8, "Punctuality": 4.0 },
+        reviews: [
+            {
+                quality: 1.0, difficulty: 5.0,
+                course: "HYPN 401: Hypnosis via Snake Staff & Manipulation of Authority",
+                date: "Year of the Sultan, 1492", attendance: "Mandatory", forCredit: true, textbook: false, grade: "D", wouldTakeAgain: false,
+                text: "Jafar hypnotizes the DEAN with his snake staff to get whatever he wants. Budget increases, tenure, corner office with a view of the palace - all through hypnosis. He tried to hypnotize the class into giving him good teaching evaluations. It worked on everyone except me because I was wearing sunglasses. He gave me a D for 'insubordination.' I was RESISTING MIND CONTROL. He also has a parrot named Iago who sits on his shoulder and HECKLES students during presentations. The parrot told me my thesis was 'a real snooze-fest.' I'm being bullied by a BIRD.",
+                tags: ["Tough Grader", "Intimidating", "Talks to a Parrot"], thumbsUp: 534, thumbsDown: 7
+            },
+            {
+                quality: 2.0, difficulty: 5.0,
+                course: "COUP 500: Seizing Power & Why It Never Works Long-Term",
+                date: "Year of the Sultan, 1493", attendance: "Mandatory", forCredit: true, textbook: false, grade: "C", wouldTakeAgain: false,
+                text: "Jafar used the class final as cover for an ACTUAL COUP ATTEMPT. The 'final exam' was storming the palace. We thought it was a simulation. It was NOT a simulation. He found a magic lamp, wished to become the most powerful sorcerer in the world, and then IMMEDIATELY wished to become an all-powerful genie. A STREET RAT pointed out that genies are trapped in lamps. Jafar got trapped in a lamp. By his own wish. In front of the whole class. The smartest and dumbest thing I have ever witnessed. Class was cancelled. We all got incompletes.",
+                tags: ["Would Not Recommend", "Tough Grader", "Intimidating"], thumbsUp: 678, thumbsDown: 4
+            },
+            {
+                quality: 2.5, difficulty: 4.0,
+                course: "SHFT 300: Snake Transformation & Giant Serpent Combat",
+                date: "Year of the Sultan, 1492", attendance: "Mandatory", forCredit: true, textbook: false, grade: "B-", wouldTakeAgain: false,
+                text: "For the practical exam Jafar turned himself into a GIANT SNAKE. In the classroom. The classroom is not big enough for a giant snake. He destroyed three walls, the projector, and my backpack. He then turned back and said 'as you can see, the transformation is seamless.' It was NOT seamless. There is a HOLE in the BUILDING. Insurance won't cover it because 'voluntary snake transformation' is apparently not in the policy. He's now teaching from a tent while the building is repaired. The parrot won't stop laughing about it.",
+                tags: ["Turned Into a Snake Once", "Hilarious", "Tough Grader"], thumbsUp: 489, thumbsDown: 9
+            },
+            {
+                quality: 2.0, difficulty: 4.5,
+                course: "LAMP 100: Genie Studies & Wish Optimization Theory",
+                date: "Year of the Sultan, 1494", attendance: "Mandatory", forCredit: true, textbook: false, grade: "C+", wouldTakeAgain: false,
+                text: "Jafar teaches this class FROM INSIDE A LAMP. He was trapped in a lamp after his own poorly-worded wish and now delivers lectures via magical echo from a brass prison. The acoustics are terrible. Iago translates by screaming everything louder. The entire course is about how to word wishes so you don't end up like him. The irony is so thick you could cut it with a scimitar. A student rubbed the lamp as a joke and Jafar materialized, granted three sarcastic wishes, and went back inside. He gave the student an A for 'demonstrating the core material.' I hate it here.",
+                tags: ["Would Not Recommend", "Hilarious", "Talks to a Parrot"], thumbsUp: 567, thumbsDown: 11
             }
         ]
     }
